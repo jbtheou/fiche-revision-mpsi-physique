@@ -1,0 +1,163 @@
+\documentclass[a4paper,12pt,oneside]{report}
+
+\usepackage[utf8x]{inputenc}			  % Utilisation du UTF8
+\usepackage{textcomp}				  % Accents dans les titres
+\usepackage [ french ] {babel}                    % Titres en français
+\usepackage [T1] {fontenc} 			  % Correspondance clavier -> document
+\usepackage[Lenny]{fncychap}                      % Beau Chapitre
+\usepackage{dsfont}                    	          % Pour afficher N,Z,D,Q,R,C
+\usepackage{fancyhdr}                             % Entete et pied de pages
+\usepackage [outerbars] {changebar}               % Positionnement barre en marge externe
+\usepackage{amsmath}				  % Utilisation de la librairie de Maths
+%\usepackage{amsfont}				  % Utilisation des polices de Maths
+\usepackage{cite}                                 % Citations de la bibliographie
+\usepackage{openbib}                              % Gestion avancée de Bibtex
+\usepackage{enumerate}				  % Permet d'utiliser la fonction énumerate
+\usepackage{dsfont}				  % Utilisation des polices Dsfont
+\usepackage{ae}					  % Rend le PDF plus lisible
+
+\newtheorem{de}{Définition}
+\newtheorem{theo}{Théorème}
+\newtheorem{prop}{Propriété}
+
+\title{Etude du mouvement d'un système soumis à une force centrale. Application à la force de gravitation}
+\author{MPSI}
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter{Force centrale}
+Soit M(m) point materiel de masse m, observé dans un réferentiel R galiléen d'origine O.\\
+Soit $\overrightarrow{F}$ une force agisant sur M(m).
+\begin{de}
+On dit que $\overrightarrow{F}$ est une force centrale si et seulement si à tous instants la force $\overrightarrow{F}$ est portée par le vecteur $\overrightarrow{OM}$.\\
+Une force centrale possède un support passant par un point fixe, ici O, appelé centre de force.
+\end{de}
+\section{Moment cinétique}
+Suppposons que la vitesse d'un point M(m) dans R soit $\overrightarrow{V}(M)_R$.
+\begin{de}
+On appele moment cinétique de M, par rapport à O, notée $\overrightarrow{L}(O)_R$, la grandeur vectorielle définie par :
+$$\overrightarrow{L}(O)_R = \overrightarrow{OM}\wedge\overrightarrow{p}(M)_R$$
+avec :
+$$\overrightarrow{p}(M)_R = m.\overrightarrow{V}(M)_R$$
+L'unité du moment cinétique est : $kg.m^2.s^{-1}$
+\end{de}
+\section{Théorème du moment cinétique}
+Supposons que M(m) soit soumis à l'ensemble des forces résultantes $\Sigma \overrightarrow{F}$ dans le réferentiel R galiléen.\\
+On obtient le théorème du moment cinétique, aussi notée T.M.C. : 
+$$\left( \dfrac{d\overrightarrow{L}(O)_R}{dt}\right)_R = \overrightarrow{OM}\wedge\Sigma\overrightarrow{F} = \Sigma\overrightarrow{M}(O) $$
+avec :
+$$\overrightarrow{M}(O) = \overrightarrow{OM}\wedge\overrightarrow{F}$$
+Le moment de la force $\overrightarrow{F}$, par rapport au point fixe O.
+\section{Application du théorème du moment cinétique à une force centrale}
+Soit M(m) un point materiel soumis seulement à la force centrale $\overrightarrow{F}=F(r).\overrightarrow{u_r}$ dans R galiléen.
+On obtient :
+$$\left( \dfrac{d\overrightarrow{L}(O)_R}{dt}\right)_R = \overrightarrow{OM}\wedge\overrightarrow{F} = \overrightarrow{0}$$
+Donc : 
+$$\overrightarrow{L}(O)_R = \overrightarrow{OM}\wedge\overrightarrow{p}(M)_R = \overrightarrow{cte}$$
+Sachant que $\overrightarrow{L}(O)_R$ est une constante, on en déduit que la trajectoire est plane, que le plan passe par le centre de force et qu'il contient $\overrightarrow{OM}$ et $\overrightarrow{V}(M)_R$
+\chapter{Approche qualitative de la nature de la trajectoire d'un point materiel soumis à une force centrale}
+Sachant que la trajectoire du point materiel M(m) de masse m, soumis à la force centrale $\overrightarrow{F}$, est plane, définissons le référentiel R galiléen de tel sort que le plan (O,X,Y) soit le plan du mouvement.
+\section{Constante des aires}
+En explicitant le moment cinétique de M(m) par rapport à O dans R, en coordonée polaire, on obtient :
+$$\overrightarrow{L}(O)_R = mr^2\mathring{\theta}\overrightarrow{k} = \overrightarrow{cte}$$
+On en déduit donc la constante des aires, notée $\varphi$ : 
+$$\varphi = r^2\mathring{\theta} = cte$$
+\section{Vitesse aréolaire}
+\begin{de}
+On défini la vitesse aréolaire par : 
+$$v_{ar} = \dfrac{\varphi}{2}$$
+avec $\varphi$ la constante des aires
+\end{de}
+\section{Énergie mécanique d'un système soumis à une force centrale}
+Supposons que la force centrale $\overrightarrow{F}$ soit conservative.\\
+Il en découle que $\overrightarrow{F}$ ``dérive`` d'une énergie potentielle $E_p(r)$.\\
+On utilisant les coordonnées polaire et la constante des aires, et en développant l'énergie cinétique dans l'expression de l'énergie mécanique, on obtient l'énergie potentielle efficace (effective), notée $E_{p,eff}$(r) :
+$$E_{p,eff} = \dfrac{m\varphi^2}{2r^2} + E_p(r)$$
+D'où l'expression de l'énergie mécanique :
+$$E_m(M) = \dfrac{m\mathring{r}^2}{2} + E_{p,eff} = cte$$ 
+\section{Trajectoire dans un champ newtonien}
+En explicitant $E_p(r)$ si M(m) est soumis à la force gravitationnelle.\\
+On obtient :
+\begin{itemize}
+ \item[$\rightarrow$] Si $E_m(M)_R$ = $E_{m1} > 0$, on peut dire que le point materiel M est dans un état libre. Il peut évoluer entre un état minimale $r_1$, défini par $\mathring{r}$ = 0, et l'infini.
+ \item[$\rightarrow$] Si $E_m(M)_R = E_{m2} < 0$ : Le système est dans un état liée, avec $r \in [r_2;r_3]$. Dans le cas des positions extremes ($r_2$ et $r_3$), on obtient : $\mathring{r} = 0$, la vitesse est orthoradiale. On dit que la particule est dans un puit de potentiel.
+\end{itemize}
+\chapter{Etude du mouvement d'un point materiel dans une force centrale d'origine gravitationnelle}
+D'apres l'expression de $E_m(M)_R$, on obtient : 
+$$\mathring{r}\mathring{} - \dfrac{\varphi}{r^3} + \dfrac{Gm'}{r^2}=0$$
+\section{Formule de Binet}
+\begin{prop}
+Les formules de Binet consiste à exprimer la vitesse de M et son accélération, en fonction de $u = \dfrac{1}{r}$, et de ses dérives par rapport à $\theta$
+\end{prop}
+\section{Force explicite de la trajectoire d'apres les formules de Binet}
+On sait que $E_m(M)_R = E_c(M)_R + E_p(M) = cte$.\\
+On obtient :
+$$r(\theta) = \dfrac{p}{1+ecos(\theta - \theta_0)}$$
+On observe donc que c'est l'équation d'une conique, d'excentricité e et de paramètre p.
+\section{Energie mécanique}
+On obtient l'expression de l'énergie mécanique en fonction de l'excentricité e :
+$$E_{m}(M)_R = \dfrac{-Gmm'}{2p}(1-e^2)$$
+De cette expression, on obtient :
+$$e = \sqrt{1 + \dfrac{2pE_m(M)_R}{Gmm'}}$$
+En en déduit les différentes expression de l'énergie mécanique en fonction de la trajectoire :
+\begin{itemize}
+ \item[$\rightarrow$] Pour e = 0, la trajectoire est circulaire :$$E_m(M) = \dfrac{-G.m.m'}{2.p}$$
+ \item[$\rightarrow$] Pour 0<e<1, la trajectoire de M(m) est elliptique : $$\dfrac{-G.m.m'}{2p} \leq E_m(M) < 0$$
+ \item[$\rightarrow$] Pour e = 1, la trajectoire est parabolique : $$E_m(M) = 0$$
+ \item[$\rightarrow$] Pour e > 1, la trajectoire de M est hyperbolique, son énergie mécanique est positive.
+\end{itemize}
+
+\chapter{Trajectoire elliptique}
+\section{Trajectoire circulaire}
+Sachant qu'une trajectoire circulaire est un cas particulier d'une trajectoire elliptique, pour laquelle e=0, donc pour laquelle p = $r_0$, le rayon du cercle, on obtient :
+$$E_m(M)_R = \dfrac{E_p}{2} = -E_c = cte$$
+A partir de cette expression pour l'énergie cinétique, et sachant que dans le cas d'une trajectoire circulaire :
+$$v_0 = r_0.\mathring{\theta}_0$$
+On obtient :
+$$\dfrac{T_0^2}{r_0^3} = 4\pi^2.\dfrac{1}{Gm'} = cte$$
+\section{Trajectoire elliptique}
+\subsection{Propriétés}
+On defini les caractéristiques suivants pour une ellipse :
+\begin{itemize}
+ \item[$\rightarrow$] O : Centre de force
+ \item[$\rightarrow$] c : Centre de l'ellipse
+ \item[$\rightarrow$] A : Apogée : Distance la plus grande entre le centre de force et le point
+ \item[$\rightarrow$] P : Périgée : Distance la plus courte entre le centre de force et le point
+\end{itemize}
+On obtient les propriétés suivantes pour une ellipse : 
+\begin{itemize}
+ \item[$\rightarrow$] Distance de M au centre de force à l'apogée, $r_A$ : $$r_A = r(\pi) = \dfrac{p}{1-e}$$
+ \item[$\rightarrow$] Distance de M au centre de force au périgée, $r_P$ : $$r_P = r(0) = \dfrac{p}{1+e}$$
+ \item[$\rightarrow$] Le demi grand axe d'une ellipse, notée a, est défini par : $$a = \dfrac{p}{1-e^2}$$
+ \item[$\rightarrow$] Demi petit axe d'une ellipse, notée b : $$b = \dfrac{p}{\sqrt{1-e^2}}$$
+ \item[$\rightarrow$] Distance focale de l'ellipse ( il existe deux foyer, par symétrie), notée f : $$f = e.a$$
+\end{itemize}
+D'apres l'expression de a, on obtient :
+$$E_m(M)_R = \dfrac{-Gmm'}{2a} = cte$$
+\subsection{Troisième loi de Kepler}
+On obtient la troisième loi de Kepler :
+$$\dfrac{T^2}{a^3} = \dfrac{4\pi^2}{Gm'}$$
+\subsection{Relation avec la vitesse}
+On obtient : 
+$$v^2 = Gm'(\dfrac{2}{r}-\dfrac{1}{a})$$
+\section{Trajectoire parabolique}
+Pour une trajectoire parabolique, pour e = 1, l'énergie mécanique est nulle. On obtient l'expression de la vitesse, dites vitesse de libération ( en effet, si le point M possède cette vitesse, elle part à l'infini, elle se soustrait au champ de force) : 
+$$v_L = \sqrt{\dfrac{2Gm'}{r}} = \sqrt{2} v_0$$
+\section{Satellisation, orbite géostationnaire}
+\begin{de}
+On dit d'un satellite qu'il est géostationnaire quand il est fixe dans le référentiel terrestre.
+\end{de}
+Ceci implique que sa vitesse angulaire, dans le référentiel géocentrique, est égale à celle de la Terre. Le satellite vérifie donc la loi des aires. Sa trajectoire est donc circulaire, plane, avec son plan perpendiculaire au moment cinétique, et qui passe par le centre de force. La trajectoire s'effectue donc dans le plan de l'équateur.
+\subsection{Orbite de transfert}
+\begin{de}
+On appele orbite de transfert ou orbite de Hohmann, la trajectoire elliptique empreinté par le satellite pour le placer dans son orbite géostationnaire. À l'apogée, le rayon doit etre le rayon de la trajectoire circulaire. On donne au satelitte a ce point une nouvelle énergie mécanique pour me mettre dans son orbite circulaire géostationnaire.
+\end{de}
+\subsection{Énergie de satellisation}
+Soit $\Delta E_m$ l'énergie de satellisation, dans un réferentiel géostationnaire.
+\begin{de}
+On défini la latitude d'un lieu à la surface de la Terre, notée $\lambda$, par l'angle entre l'équateur et le segment [OM]
+\end{de}
+On obtient : 
+$$\Delta E_m = \dfrac{-Gm_Tm_S}{2r_0} + \dfrac{Gm_Tm_S}{R_T} - \dfrac{1}{2}m_SR_T^2\omega^2cos^2(\lambda)$$
+On minimise donc l'énergie à fournir avec un lancement à l'équateur, dirigé vers l'est pour profiter de la rotation de la Terre
+\end{document}

@@ -1,0 +1,48 @@
+\documentclass[a4paper,12pt,oneside]{report}
+
+\usepackage[utf8x]{inputenc}			  % Utilisation du UTF8
+\usepackage{textcomp}				  % Accents dans les titres
+\usepackage [ french ] {babel}                    % Titres en français
+\usepackage [T1] {fontenc} 			  % Correspondance clavier -> document
+\usepackage[Lenny]{fncychap}                      % Beau Chapitre
+\usepackage{dsfont}                    	  % Pour afficher N,Z,D,Q,R,C
+\usepackage{fancyhdr}                             % Entete et pied de pages
+\usepackage [outerbars] {changebar}               % Positionnement barre en marge externe
+\usepackage{amsmath}				  % Utilisation de la librairie de Maths
+%\usepackage{amsfont}				  % Utilisation des polices de Maths
+\usepackage{cite}                                 % Citations de la bibliographie
+\usepackage{openbib}                              % Gestion avancée de Bibtex
+\usepackage{enumerate}				  % Permet d'utiliser la fonction énumerate
+\usepackage{dsfont}				  % Utilisation des polices Dsfont
+\usepackage{ae}					  % Rend le PDF plus lisible
+
+\newtheorem{de}{Définition}
+\newtheorem{theo}{Théorème}
+\newtheorem{prop}{Propriété}
+
+
+\title{Résumé}
+\author{MPSI}
+\begin{document}
+\section{Définitions}
+\begin{itemize}
+ \item[$\rightarrow$] $\xi(t) = \dfrac{n_i-n_i(t)}{\nu_i} = \dfrac{n'_i(t)-n'_i}{\nu'_i}$
+\end{itemize}
+\section{Application du $I^{er}$ principe}
+\begin{itemize}
+ \item[$\rightarrow$] Évolution isochore : $\Delta u = Q_v$\\
+ \item[$\rightarrow$] Évolution mono ou isobare : $\Delta H = Q_p$ (uniquement si $p_i=p_f$ pour une monobare)\\
+ \item[$\rightarrow$] $\Delta_rX^0 = \sum_{i=1}^N \nu_i X^0_{m,i}$\\
+ \item[$\rightarrow$] Évolution isochore, mono ou isotherme : $Q_v = \Delta_ru^0(T)\xi(T)$\\
+\item[$\rightarrow$] Évolution mono ou isobare, mono ou isotherme : $Q_p = \Delta_rH^0(T)\xi(T)$\\
+\end{itemize}
+\section{Enthalpie standard de formation}
+\begin{itemize}
+ \item[$\rightarrow$] Loi de Hess : $\Delta_r H^0 (T) = (\sum_i \nu_i H_{i_f} (produit_i) - \sum_i \nu_i H_{i_f} (reactif_i)(T))$\\
+ \item[$\rightarrow$] $\Delta_r H^0(T_2) = \Delta_r H^0(T_1) + \int_{T_1}^{T_2}(\Delta_rC^0_{p,mol} dT)$\\
+ \item[$\rightarrow$] Température de flamme : $Q + \int_{T_{ini}}^{T_{fla}} \sum_i n_i.Cp_{mol,i}^0 dT = 0$\\
+\item[$\rightarrow$] Énergie de liaison : D(A-B) = $\Delta_rH^0(T)$\\
+ \item[$\rightarrow$] Énergie d'attachement : $E_{AE}(T) = -\Delta_r H^0(T)$
+
+\end{itemize}
+\end{document}

@@ -1,0 +1,62 @@
+\chapter{Régime Transitoire}
+\section{Réponse d'un circuit R.C à un échelon de tension}
+\subsection{Cas général}
+Considérons un circuit composé d'une maille de charge, qui contient un génerateur E, une résistance R et un condensateur C, et d'une maille de décharge, qui ne contient que R et C.\\
+Par application de loi des mailles, on obtient l'équation différentielle de la charge :
+$$\dfrac{du_c(t)}{dt} + \dfrac{u_c(t)}{RC} = \dfrac{E}{RC}$$
+En posant la constante de temps : $$\tau = RC$$
+On obtient l'équation de la charge:
+$$u_c(t) = E(1-e^{-\dfrac{t}{\tau}})$$
+De façon analogue, par application de loi des mailles, on obtient l'équation différentielle de la décharge :
+$$\dfrac{du_c(t)}{dt} + \dfrac{u_c(t)}{\tau} = 0$$
+On obtient l'équation de la décharge:
+$$u_c(t) = E.e^{-\dfrac{t}{\tau}}$$
+\subsubsection{Réponse à un échelon de tension}
+Considérons un système composé d'un GBF (Générateur basse-fréquence), d'une résitance R et d'un condensateur C.
+Sachant que u(t) est continue au borne d'un condensateur, on obtient une succession de charge et de décharge, toutes les demi-périodes du signal échelon.
+\section{Réponse d'un circuit R.L à un échelon de tension}
+\subsection{Cas général}
+Considérons un circuit composé d'une maille de charge, qui contient un génerateur E, une résistance R et un solénoïde L, et d'une maille de décharge, qui ne contient que L et R.\\
+Par application de loi des mailles, on obtient l'équation différentielle de la charge :
+$$\dfrac{di(t)}{dt} + \dfrac{R}{L}i = \dfrac{E}{L}$$
+En posant la constante de temps : $$\tau = \dfrac{L}{R}$$
+D'où l'équation de la charge:
+$$u_c(t) = \dfrac{E}{R}(1-e^{-\dfrac{t}{\tau}})$$
+De façon analogue, par application de loi des mailles, on obtient l'équation différentielle de la décharge :
+$$\dfrac{di(t)}{dt} + \dfrac{i(t)}{\tau} = 0$$
+D'où l'équation de la décharge:
+$$u_c(t) = \dfrac{E}{R}e^{-\dfrac{t}{\tau}}$$
+\subsection{Réponse à un échelon de tension}
+Considérons un système composé d'un GBF, d'une résitance R et d'un solénoïode L.
+Sachant que i(t) est continue au borne d'un solénoïde, on obtient une succession de charge et de décharge, toutes les demi-périodes du signal échelon.
+\section{Réponse d'un circuit R.L.C à un échelon de tension}
+Considérons un circuit composé d'une maille de charge, qui contient un génerateur E, un résistance R, un solénoïde L et un condensateur C, et d'une maille de décharge, qui ne contient que L, R et C.\\
+En posant : 
+$$\omega_0 = \dfrac{1}{\sqrt{LC}}$$
+$$Q = \dfrac{L\omega_0}{R}$$
+On obtient :
+$$\dfrac{d^2u_c(t)}{d^2t} + \dfrac{w_0}{Q}\dfrac{du_c(t)}{dt} + \omega_0^2u_c(t) = \omega_0^2E$$
+\subsection{Différents régimes d'évolutions}
+Soit $\Delta$ le déterminant de l'équation caractéristique de cette équation :
+$$\Delta = \omega_0^2\left( \dfrac{1}{Q^2} - 4\right)$$
+Les régimes d'évolutions dépendent du signe de $\Delta$
+\begin{itemize}
+ \item[$\rightarrow$] $\Delta = 0$, $Q_c = \dfrac{1}{2}$ : Régime critique. \\
+ \item[$\rightarrow$] $\Delta > 0$, $Q < Q_c$ : Régime Aperiodique. \\
+ \item[$\rightarrow$] $\Delta < 0$, $Q > Q_c$ : Régime Pseudo-periodique. \\
+\end{itemize}
+\subsubsection{Régime pseudo-periodique}
+Nous nous limiterons à l'étude ce régime, qui est le "seul intéressent" d'un point de vue physique à notre niveau.
+On peut écrire $\Delta$ sous la forme :
+$$\Delta = j^2\omega_0^2(4-\dfrac{1}{Q^2})$$
+Les solutions sont donc du type :
+$$U_c(t) = E\left( 1 - \dfrac{1}{cos(\varphi)}e^{\dfrac{-\omega_0t}{2Q}}cos(\Omega t+\varphi)\right)$$
+Avec :
+$$\Omega = \omega_0\sqrt{1 - \dfrac{1}{4Q^2}}$$
+\subsubsection{Décrement logaritmique}
+Dans l'étude du régime pseudo-periodique, on introduit le décrément logaritmique, défini par :
+$$\delta = ln\left(\dfrac{u_c(t)}{u_c(t+T)}\right) $$
+On obtient donc :
+$$\delta = \dfrac{\omega_0T}{2Q}$$
+et, sur n periode :
+$$\delta_n = n.\delta$$

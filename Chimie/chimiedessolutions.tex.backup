@@ -1,0 +1,119 @@
+\chapter{La chimie des solutions}
+\section{L'eau, molécule et solvant}
+\subsection{Moment dipolaire}
+\begin{de}
+On défini le vecteur dipolaire $\overrightarrow{P}$ par:
+$$\overrightarrow{P} = q\overrightarrow{NP}$$
+avec :
+\begin{itemize}
+ \item[$\rightarrow$] N : Barycentre des charges négatives
+ \item[$\rightarrow$] P : Barycentre des charges positives
+ \item[$\rightarrow$] q : Charge associée au dipole
+\end{itemize}
+Son unité est le Debye, notée B.
+$$1D = \dfrac{1}{3}.10^{-29}C.m$$
+A température ambiante, nous avons : p($H_2O$) = 1,85D
+\end{de}
+\subsection{Force d'interaction}
+En partant de la loi de Coulomb : 
+$$F_{vide} = \dfrac{q_1.q_2}{4.\pi.\varepsilon_0.r^2}$$
+On obtient la force reliant deux charges dans l'eau :
+$$F_{eau} = \dfrac{F_{vide}}{\varepsilon_R}$$
+avec $\varepsilon_R$ : Permitivité relative à l'eau, égale à 80 à température ambiante. Ceci nous renseigne sur le caractère polarisant de la molécule d'eau.
+\section{Réactions chimiques}
+Considérons la réaction suivant :
+$$\nu_1.A_1 + \nu_2.A_2 + .... \rightarrow \nu_1'.A_1' + \nu_2'.A_2' + .....$$
+\subsection{Avancement d'une réaction chimique}
+\begin{de}
+L'avancement à l'instant t est donné par :
+$$\xi(t) = \dfrac{n_i - n_i(t)}{\nu_i} = \dfrac{n_i'(t) - n_i'}{\nu_i'} $$
+L'avancement ne dépend pas des entités chimiques mise en jeu. C'est une grandeur caractéristique de la réaction.
+\end{de}
+\subsection{Équilibre chimique}
+\begin{de} 
+On considère que la réaction ci-dessus est à l'équilibre chimique quand la vitesse de réaction, définie par :
+$$v = \dfrac{1}{\nu'_1}.\dfrac{d[A'_i(t)]}{dt} = -\dfrac{1}{\nu_1}.\dfrac{d[A_i(t)]}{dt}$$
+est nulle.
+\end{de}
+\subsection{Relation de Guldberg et Waages}
+\begin{de}
+On appelle quotient de cette réaction, noté Q(t), le produit de l'activité des produits, affecté de leurs coefficiants stochiométriques, sur le produit des réactifs affecté de leurs coefficiants stochiométriques :
+$$Q(t) = \dfrac{a(A'_1)^{\nu'_1}.a(A'_2)^{\nu'_2}....}{a(A_1)^{\nu_1}.a(A_1)^{\nu_1}...}$$ 
+\end{de}
+On défini l'activité des différentes entitées chimiques de la façon suivante :
+\begin{itemize}
+ \item[$\rightarrow$] Si X est le solvant (eau) : $$a(X) = 1$$
+ \item[$\rightarrow$] Si X est un soluté non missible en solution, ou un liquide non missible : $$a(X) = 1$$
+ \item[$\rightarrow$] Si X est un soluté missible en solution, alors, avec $C_0$ : Concentration de référence, souvent 1 mol.$l^{-1}$. $$a(X) = \dfrac{[X(t)]}{C_0}$$
+ \item[$\rightarrow$] Si X est un gaz, alors, avec $p_0$ : Pression de référence, souvent 1 bar. $$a(X) = \dfrac{p(X(t))}{p_0}$$
+\end{itemize}
+L'activité est donc une grandeur sans dimensions.\\
+Cette relation permet d'établir qu'à l'équilibre chimique, le quotient de la réaction est une constante qui ne dépend que de la température. Cette constante est notée K(T) : $$K(T)=Q(t_e)=cte$$
+\section{Réactions acido-basique}
+\begin{de}
+Selon la définition de Bronsted, un acide est une entitée susceptible de céder un ou plusieurs protons
+\end{de}
+\subsection{Constante d'acidité}
+Considérons le couple acido-basique AH/$A^-$. Ce couple réagit avec l'eau selon la réaction :
+$$AH + H_20 = A^- + H_30^+$$
+Par application de la relation de Guldberg et Waages, on défini la constante de réaction :
+$$K(T) = \dfrac{[A^-].[H_3O^+]}{[AH]} = cte$$
+Cette constante de réaction est appelé constante d'acidité, notée $K_A(T)$.
+\subsection{Constante de basicité}
+En utilisant le caractere amphotère (ampholite)\footnote{Entitée chimique qui peut être, selon les cas, une base ou un acide} de l'eau, on defini la constante de basicité comme la constante de la réaction suivante :
+$$A^- + H_20 = AH + OH^-$$
+On la note $K_B(T)$ :
+$$K_B(T) = \dfrac{[AH].[HO^-]}{[A^-]}$$
+\section{Produit ionique de l'eau}
+Conscient que l'eau est un composé amphotère, on défini le produit ionique de l'eau, constante de réaction de la réaction suivante :
+$$2H_2O = H_30^+ + HO^-$$
+On le note $K_e(T)$
+$$K_e(T) = [H_3O^+].[HO^-]$$
+\section{Relation entre $K_A$ et $K_B$ - $pK_A$ et $pK_B$}
+On obtient la relation suivante :
+$$K_A=\dfrac{K_e}{K_B}$$
+On note pX = -log(X), avec X une grandeur sans dimension. On obtient une seconde relation :
+$$pK_A + pK_B = pK_e$$
+\section{Diagramme de prédominance}
+Pour tracer un diagramme de prédominance, on isole $[H_3O^+]$ de la constante d'acidité $K_A$. Puis on passe au pH = p([$H_3O^+$]). On obtient une formule de la forme :
+$$pH = pK_A + log\left( \dfrac{[A^-]}{[AH]}\right) $$
+On obtient donc la séparation : pH = $pK_A$ et on détermine les pH de prédominance.\\
+On dit qu'une entité est majoriaire si elle est au moint 10x plus concentré que son entité conjugée.
+\section{Force d'un acide ou d'une base - Nivellement par l'eau}
+Plus le $pK_A$ d'un couple est faible, plus l'acide est fort. Respectivement, plus le $pK_A$ d'un couple est élevé, plus la base est forte.\\
+Les acides les plus fort ne sont pas observable dans l'eau, on dit que ces acides sont nivellé par l'eau.
+\chapter{Réaction de complexation}
+On peut modéliser les réactions de complexation par une réaction du type :
+$$M + nL = ML_n$$
+avec :
+\begin{itemize}
+ \item[$\rightarrow$] M : Cation métalique (ex : $Fe^{3+}$)
+ \item[$\rightarrow$] L : Ligent (ex: Molécule avec un atome possèdant un doublé non liant, un anion)
+ \item[$\rightarrow$] M$L_n$ : L'ion complexe
+\end{itemize}
+\section{Constante de formation et de dissociation d'un ion complexe}
+\begin{de}
+On appele constante de formation d'un ion complexe, notée $K_F$, la constante de la réaction de complexation donnée par la relation de Guldberg et Waages.\\
+Respectivement, la constante de dissociation d'un ion complexe, notée $K_D$, est la constante de la réaction de dissocitation donnée par la relation de Guldberg et Waages :
+$$K_D = \dfrac{1}{K_F}$$
+Quand on procède à la création d'un ion complexe en de multiple étape, on remarque que la constante de réaction final est égale au produit des constantes des réactions intermédiaire.
+\section{Diagramme de prédominance}
+Pour tracer un diagramme de prédominance, on isole $[HO^-]$ de la constante de formation $K_F$. Puis on passe au pOH = p([$OH^-$]). On obtient une formule de la forme :
+$$pOH = pK_D + log\left( \dfrac{[M]}{[ML_n]}\right) $$
+\end{de}
+\chapter{Réaction de précipitation}
+\begin{de}
+ Les réactions de précipitation sont des cas particulier de réaction de complexation dans lequels le produit de la réaction est électriquement neutre, c'est donc un précipité.
+\end{de}
+La réaction de précipitation est caractérisé par une constante de dissociation appelé produit de solubilité du soluté, notée $K_s$, à l'équilibre chimique (donc quand la solution est saturée).\\
+Par application de la relation de Gouldberg et Waages :
+$$K_s = [M].[L]^n$$ 
+\section{Diagramme de prédominance}
+On obtient une équation de la forme : 
+$$p(L) = pK_s + log(M)$$
+On travaille à partir de cette équation.
+\section{Solubilité}
+\begin{de}
+La solubilité d'un soluté, notée s, correspond au nombre de mole de soluté que l'on peut dissoudre par litre de solution.\\
+Son unité est mol.$l^{-1}$
+\end{de}

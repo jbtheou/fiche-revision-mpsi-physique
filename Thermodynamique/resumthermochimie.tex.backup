@@ -1,0 +1,65 @@
+\documentclass[a4paper,12pt,oneside]{report}
+
+\usepackage[utf8x]{inputenc}			  % Utilisation du UTF8
+\usepackage{textcomp}				  % Accents dans les titres
+\usepackage [ french ] {babel}                    % Titres en français
+\usepackage [T1] {fontenc} 			  % Correspondance clavier -> document
+\usepackage[Lenny]{fncychap}                      % Beau Chapitre
+\usepackage{dsfont}                    	  % Pour afficher N,Z,D,Q,R,C
+\usepackage{fancyhdr}                             % Entete et pied de pages
+\usepackage [outerbars] {changebar}               % Positionnement barre en marge externe
+\usepackage{amsmath}				  % Utilisation de la librairie de Maths
+%\usepackage{amsfont}				  % Utilisation des polices de Maths
+\usepackage{cite}                                 % Citations de la bibliographie
+\usepackage{openbib}                              % Gestion avancée de Bibtex
+\usepackage{enumerate}				  % Permet d'utiliser la fonction énumerate
+\usepackage{dsfont}				  % Utilisation des polices Dsfont
+\usepackage{ae}					  % Rend le PDF plus lisible
+
+\newtheorem{de}{Définition}
+\newtheorem{theo}{Théorème}
+\newtheorem{prop}{Propriété}
+
+
+\title{Résumé}
+\author{MPSI}
+\begin{document}
+\section{Définitions}
+\begin{itemize}
+ \item[$\rightarrow$] $\xi(t) = \dfrac{n_i-n_i(t)}{\nu_i} = \dfrac{n'_i(t)-n'_i}{\nu'_i}$
+\end{itemize}
+\section{Application du $I^{er}$ principe}
+\begin{itemize}
+ \item[$\rightarrow$] Évolution isochore : $\Delta u = Q_v$\\
+ \item[$\rightarrow$] Évolution mono ou isobare : $\Delta H = Q_p$ (uniquement si $p_i=p_f$ pour une monobare)\\
+ \item[$\rightarrow$] $\Delta_rX^0 = \sum_{i=1}^N \nu_i X^0_{m,i}$
+ \item[$\rightarrow$] Évolution isochore, mono ou isotherme : $Q_v = \Delta_ru^0(T)\xi(T)$
+\item[$\rightarrow$] Évolution mono ou isobare, mono ou isotherme : $Q_p = \Delta_rH^0(T)\xi(T)$
+\item[$\rightarrow$] $\Delta H = n.C_{p,mol}.\Delta T$
+\item[$\rightarrow$] $\alpha = \dfrac{1}{V}\left(\dfrac{\partial V}{\partial T} \right)_p $
+\item[$\rightarrow$]$\xi_T = -\dfrac{1}{V}\left(\dfrac{\partial V}{\partial p} \right)_T$
+\item[$\rightarrow$]$\beta = \dfrac{1}{p}\left(\dfrac{\partial p}{\partial T} \right)_V $
+\end{itemize}
+\section{Premier principe}
+\begin{itemize}
+ \item[$\rightarrow$] $\delta w = -p_{ext}(M).dV$ 
+ \item[$\rightarrow$] Évolution isochore : $\Delta u = Q$
+ \item[$\rightarrow$] Évolution isobare : $\Delta H = Q$
+\item[$\rightarrow$] Évolution isentropique : $p(t).V^{\gamma} = cte$
+ \item[$\rightarrow$] $H = u + p.V$
+ \item[$\rightarrow$] $C_{v,mol}=\dfrac{R}{\gamma - 1}$
+ \item[$\rightarrow$] $C_{p,mol}=\dfrac{\gamma.R}{\gamma - 1}$
+ \item[$\rightarrow$] Pour une phase condensé : $du = dH = C.dT$
+\item[$\rightarrow$] $dS = \dfrac{du}{T}+\dfrac{p.dV}{T}$ ou $dS = \dfrac{dH}{T}-\dfrac{V.dp}{T}$ 
+\end{itemize}
+\section{Machine Thermique}
+\begin{itemize}
+ \item[$\rightarrow$] Un cycle est moteur si il est décrit dans le sens horaire dans un diagramme de Clapeyron 
+ \item[$\rightarrow$] $\nu$ = $\dfrac{\mbox{Énergie~ utile}}{\mbox{Énergie~ dépensé}}$
+\end{itemize}
+\section{Transition de phase}
+\begin{itemize}
+ \item[$\rightarrow$] Dans une évolution isotherme : $\Delta H = ml = L= Q$
+ \item[$\rightarrow$] Dans une évolution isotherme et isobare : $\Delta S = \dfrac{ml}{T}$
+\end{itemize}
+\end{document}

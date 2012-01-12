@@ -1,0 +1,123 @@
+\documentclass[a4paper,12 pt,oneside]{report}     % Type de document
+\usepackage[utf8x]{inputenc}			  % Utilisation du UTF8
+\usepackage{textcomp}				  % Accents dans les titres
+\usepackage [ french ] {babel}                    % Titres en français
+\usepackage [T1] {fontenc} 			  % Correspondance clavier -> document
+\usepackage[Lenny]{fncychap}                      % Beau Chapitre
+\usepackage{dsfont}                    	  % Pour afficher N,Z,D,Q,R,C
+\usepackage{fancyhdr}                             % Entete et pied de pages
+\usepackage [outerbars] {changebar}               % Positionnement barre en marge externe
+\usepackage{amsmath}				  % Utilisation de la librairie de Maths
+%\usepackage{amsfont}				  % Utilisation des polices de Maths
+\usepackage{cite}                                 % Citations de la bibliographie
+\usepackage{openbib}                              % Gestion avancée de Bibtex
+\usepackage{enumerate}				  % Permet d'utiliser la fonction énumerate
+\usepackage{dsfont}				  % Utilisation des polices Dsfont
+\usepackage{ae}					  % Rend le PDF plus lisible
+\usepackage[pdftex]{graphicx}
+\usepackage{graphics}
+
+\newtheorem{de}{Définition}
+\newtheorem{theo}{Théorème}
+
+%opening
+\title{Elements de statique des fluides}
+\author{MPSI}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\chapter{Éléments de statique des fluides}
+\begin{de}
+Un fluide est un milieu continu, déformable. On considère dans cette définition les liquides et les gaz. Un fluide est considéré comme parfait si son coefficiant de viscosité est nul.
+\end{de}
+\section{Pression et force pressante}
+On appelle pression exercé par le fluide en M, le scalaire défini par :
+$$d\overrightarrow{F_{p}} = p(M).dS(M)\overrightarrow{n}$$
+Système d'unité :
+\begin{itemize}
+ \item 1 bar = $10^{5} Pa$
+ \item 1 tor, (De Torricelli) = pression exercé par 1mm de Hg ( Mercure)
+ \item 1 atm = 1,013 bar
+\end{itemize}
+\section{Force Résultante exercé par un fluide}
+Considérons un solide immergé dans un fluide.
+La force pressante résultante exercé par un fluide sur ce solide, est la somme des forces $d\overrightarrow{F}(M)$ :
+$$\overrightarrow{F_{res}} = \iint_{Surface} d\overrightarrow{F_{(M)}} = - \iint_{Surface} p(M).dS\overrightarrow{n_{e}}$$
+avec $\overrightarrow{n_e}$ vecteur unitaire, orienté vers l'extérieur, normal à dS(M)
+\section{Particule de Fluide}
+Considérons un fluide quelconque. Soit M un point quelconque dans le fluide.
+Soit $\rho$(M), masse volumique dans le fluide, au voisinage de M
+Soit $d_M$, masse d'un volume élementaire au voisinage de M, $dV_M$
+$$d_M = \rho(M).dV_M$$
+\section{Force pressante exercé par un fluide sur une particule de fluide}
+Considérons une particule de fluide cubique définie au voisinage de M(x,y,z).
+Soit $d\overrightarrow{F_{res}}$ la force exercé par le fluide sur la particule de fluide.
+$$d\overrightarrow{F_{res}} = -\overrightarrow{grad}(p).dV_m$$
+\section{Définition d'un gradiant}
+\begin{de}
+Soit p la pression du fluide, avec p = p(x,y,z)
+ $$(\dfrac{\partial p}{\partial x})_{y,z}\overrightarrow{i} + (\dfrac{\partial p}{\partial y})_{x,z}\overrightarrow{j} + (\dfrac{\partial p}{\partial z})_{x,y}\overrightarrow{k} = \overrightarrow{grad}(p) $$
+On le défini aussi à l'aide de la relation : 
+$$dp(M) = \overrightarrow{grad}(p).\overrightarrow{dl}$$
+\end{de}
+\section{Loi fondamental de la statique, dans un référentiel galiléen}
+\begin{de}
+Considérons un fluide au repos dans le référentiel R galiléen
+Considérons une particule de fluide définie au voisinage d'un point M.
+La masse de cette particule de fluide est :
+$$d_m = \rho(M).dV_m$$
+Considérons que la particule de fluide est au repos. Grâce au P.F.D., on obtient : 
+$$\overrightarrow{grad}(p) = \rho(M).\overrightarrow{g}$$
+Ceci constitue la loi fondamental de la statique des fluides dans R.
+\end{de}
+\section{Théorème de Pascal}
+\begin{de}
+Un fluide est dit incompressible si :
+$$\rho(M)=\rho_0=cte$$
+\end{de}
+Considérons un fluide incompressible.
+Par application de la loi fondamental de la statique, on obtient : 
+$$\overrightarrow{grad}(p) = \rho(M).\overrightarrow{g}$$
+Sachant que la variation de pression est donnée par : 
+$$dp(M) = \overrightarrow{grad}(p).\overrightarrow{dl}$$
+En explicitant, on obtient la relation de Pascal :
+$$p(M) = p_0 + \rho_0.g.z$$
+avec ici, z > 0
+\begin{theo}
+"Un fluide incompressible transmet intégralement les variations de pressions"
+\end{theo}
+\section{Fluide compressible assimilable à un gaz parfait}
+Considérons un gaz parfait isotherme.
+En utilisant la loi fondamentale de la statique des fluides et la définition du gradiant, on obtient : 
+$$p(z) = p_0e^{\dfrac{-Mgz}{Rt_0}}$$
+\section{Loi fondamentale de la statique des fluides dans un référentiel non galiléen}
+Considérons une particule M(dM) de masse dM au repos dans un référentiel non galiléen
+On ajoute deux forces dans la somme des forces du PFD : \\
+\begin{enumerate}
+ \item La force d'entraînement $d\overrightarrow{F_{ie}} = -d_m.\overrightarrow{a_e}$ 
+ \item La force de coriolis $d\overrightarrow{F_{ic}} = -d_m.\overrightarrow{a_c}=\overrightarrow{0}$ \\
+\end{enumerate}
+Ceci nous conduit à la loi fondamentale de la statique dans un référentiel non galiléen :
+$$\overrightarrow{grad}(p) = \rho(M).(\overrightarrow{g}-\overrightarrow{a_e})$$
+Si le repère est non galiléen, et qu'il est en : \\
+\begin{enumerate}
+ \item Translation rectiligne par rapport à un référentiel galiléen, alors :\\
+	$$\overrightarrow{a_e}=a_0.\overrightarrow{i}$$
+  avec $a_0$ accélération de ce repère par rapport à celui galiléen
+ \item Rotation uniforme autour d'un axe fixe du référentiel galiléen :
+$$\overrightarrow{ac} = -\omega^{2}\overrightarrow{R}$$
+avec $\overrightarrow{R}$ la distance entre l'axe de rotation et le point \\
+\end{enumerate}
+Les surfaces isobare sont perpendiculaire à $\overrightarrow{g}$ dans un référentiel galiléen,et perpendiculaire à $\overrightarrow{g}-\overrightarrow{a_e}$
+\section{Force pressante et poussé d'Archimède}
+\begin{de}
+On appelle poussé d'Archimède la force définie par : 
+$$\overrightarrow{F_{res}} = -\int\int_{surface}p(m).dS.\overrightarrow{n_e}$$
+\end{de}
+\begin{theo}
+ "Tous corps immergé dans un ou plusieurs fluide subit une force pressante résultante opposé au poids du fluide déplacé."
+Cette force est notée $\overrightarrow{\pi}$
+\end{theo}
+\end{document}

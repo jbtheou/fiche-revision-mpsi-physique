@@ -1,0 +1,79 @@
+\chapter{Diagramme de Bode}
+Considérons un circuit électrique en régime sinusoïdale forcé. Ce circuit peut se ramené à un quadripole caractérisé par :
+\begin{itemize}
+ \item[$\rightarrow$] $U_e(t)$ : tension d'entrée
+ \item[$\rightarrow$] $U_s(t)$ : tension de sortie
+\end{itemize}
+\section{Fonction de transfert}
+\begin{de}
+On défini la fonction de transfert, notée $\underline{H}(j\omega)$, par le rapport de $\underline{U_s}(t)$ sur $\underline{U_e(t)}$ :
+$$\underline{H}(j\omega) = \dfrac{\underline{U_s}(t)}{\underline{U_e}(t)} = \dfrac{\underline{U_{M_s}}(t)}{\underline{U_{M_e}}(t)}$$
+\end{de}
+\section{Gain et relation de phase}
+On défini le gain de la fonction de transfert par :
+$$H(\omega) = \sqrt{\underline{H}(j\omega).\underline{H^*}(j\omega)\underline{}}$$
+On défini l'argument de la fonction de transfert par :
+$$\underline{H}(j\omega) = H(\omega)e^{j\varphi(\omega)}$$
+avec $\varphi(\omega)$ l'argument.\\
+Pour détermine l'argument, on isole au numérateur ou au dénominateur la partie imaginaire, puis on utilise le faite que :
+$$tan(\pm\varphi(\omega))=\dfrac{\mbox{Imaginaire}}{\mbox{Réel}}$$
+avec $\pm$ selon si la partie imaginaire est au numérateur (+) ou au dénominateur (-)
+\section{Ordre de la fonction de transfert}
+\begin{de}
+ On défini l'ordre de la fonction de transfert comme le degres le plus élevé du polynome associé, avec $\omega$ la variable.
+\end{de}
+\section{Diagramme de Bode}
+\subsection{Gain de décibel}
+\begin{de}
+On appele gain en décibel, notée $H_{dB}(\omega)$, la fonction défini par :
+$$H_{dB}(\omega) = 20log(H(\omega))$$
+\end{de}
+On utilise, pour le diagramme de bode, une échelle logarithmique
+\subsection{Tracer un diagramme de bode pour le gain}
+On utilise la méthode suivante pour tracer le diagramme de bode du gain : 
+\begin{itemize}
+ \item[$\rightarrow$] On pose $H_{dB}$ en ordonnée, $log(\omega)$ en abscisse
+ \item[$\rightarrow$] On calcule les asymptotes : $x \rightarrow 0$, $x \rightarrow \infty$
+\item[$\rightarrow$] On prend des valeurs particulière
+\end{itemize}
+\subsection{Tracer un diagramme de bode pour l'argument}
+On utilise la méthode suivante pour tracer le diagramme de bode de l'argument : 
+\begin{itemize}
+ \item[$\rightarrow$] On calcule les asymptotes de $tan(\varphi)$ : $x \rightarrow 0$, $x \rightarrow \infty$. On en déduit les asymptotes de $\varphi$.
+\item[$\rightarrow$] On prend des valeurs particulière
+\end{itemize}
+\subsection{Pulsation de coupure à 3 dB}
+\begin{de}
+La pulsation de coupure à 3dB, notée $\omega_c$, est la pulsation pour laquelle :
+$$H_{dB}(x) = H_{dB_{Max}} - 3$$
+Ce qui est équivalent à :
+$$H(x) = \dfrac{H_{Max}(x)}{\sqrt{2}}$$
+\end{de}
+\subsection{Fonction du $2^{nd}$ ordre - Résonnance de charge}
+On observe que sur un montage R.L.C. avec sortie au borne de C, il y à résonnance de charge pour Q > 0,7.
+À la résonnance, les caractéristiques sont les suivantes :\\
+\begin{itemize}
+ \item[$\rightarrow$]$x_0 = \sqrt{1-\dfrac{1}{2Q^2}}$\\
+ \item[$\rightarrow$]$H_{Max} = \dfrac{Q}{\sqrt{1 - \dfrac{1}{4Q^2}}}$\\
+ \item[$\rightarrow$]$U_s$(t) est en quadrature retard par rapport à $U_e$(t)\\
+\end{itemize}
+\subsection{Fonction du $2^{nd}$ ordre - Résonnance de tension}
+On observe que sur un montage R.L.C. avec sortie au borne de R, il y à résonnance de tension $\forall$ Q.
+À la résonnance, les caractéristiques sont les suivantes :
+\begin{itemize}
+ \item[$\rightarrow$]$x_0 = 1$
+ \item[$\rightarrow$]$H_{Max} = 1$
+ \item[$\rightarrow$]$U_s$(t) et $U_e$(t) sont en phase.
+\end{itemize}
+\section{Détermination de la nature du filtre}
+On peut déterminer de façon qualitative le type de filtre crée par le circuit étudié
+\subsection{Comportement d'un solénoïde}
+\begin{itemize}
+ \item[$\rightarrow$] En Basse-Fréquence : Interrupteur fermé
+ \item[$\rightarrow$] En Haute-Fréquence : Interrupteur ouvert
+\end{itemize}
+\subsection{Comportement d'un condensateur}
+\begin{itemize}
+ \item[$\rightarrow$] En Basse-Fréquence : Interrupteur ouvert
+ \item[$\rightarrow$] En Haute-Fréquence : Interrupteur fermé
+\end{itemize}

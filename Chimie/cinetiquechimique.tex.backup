@@ -1,0 +1,58 @@
+\chapter{Avancement - Vitesse d'une réaction chimique}
+Considérons la réaction suivant :
+$$\nu_1A_1 + \nu_2A_2 + .... \rightarrow \nu_1'A_1' + \nu_2'A_2' + .....$$
+\section{Avancement d'une réaction chimique}
+\begin{de}
+L'avancement à l'instant t est :
+$$\xi(t) = \dfrac{n_i - n_i(t)}{\nu_i} = \dfrac{n_i'(t) - n_i'}{\nu_i'} $$
+L'avancement ne dépend pas des entités chimique mise en jeux. C'est une grandeur caractéristique de la réaction.
+On obtient donc les relations, en utilisant les concentrations au lieu des quantités de matières :
+$$[A_i(t)] = [A_i(0)] - \nu_i.x(t)$$
+$$[A'_i(t)] = [A'_i(0)] + \nu'_i.x(t)$$
+\end{de}
+\section{Vitesse d'une réaction chimique}
+\begin{de} 
+La vitesse de réaction est définie par :
+$$v = \dfrac{1}{\nu'_1}.\dfrac{d[A'_i(t)]}{dt} = -\dfrac{1}{\nu_1}.\dfrac{d[A_i(t)]}{dt}$$
+D'où, d'apres les relations précedents :
+$$v(t) = \dfrac{dx(t)}{dt}$$
+\end{de}
+\subsection{Facteur cinétique}
+Il existe certains facteurs pouvant influer sur la vitesse d'une réaction :
+\begin{itemize}
+ \item[$\rightarrow$] Température
+ \item[$\rightarrow$] Concentration
+ \item[$\rightarrow$] Influence éventuelle d'un catalyseur
+ \item[$\rightarrow$] Pression exterieur, dans le cas d'une réaction entrainant un dégagement gazeux
+ \item[$\rightarrow$] Eclairage de la solution
+ \item[$\rightarrow$] Surface de contact en phase hétérogène (ex : corrosion d'un bateau)
+\end{itemize}
+\subsection{Influence de la concentration}
+\begin{de}
+Considérons la réaction suivant :
+$$\nu_1A_1 + \nu_2A_2 + .... \rightarrow \nu_1'A_1' + \nu_2'A_2' + .....$$
+On dit que cette réaction admet un ordre si elle peut s'exprimer sous la forme, si la température de la solution est constante :
+$$v = k[A_1(t)]^{\alpha_1}.k[A_2(t)]^{\alpha_2}.....$$ 
+avec : $\alpha_i$ : coefficiant déterminé par l'experience. On détermine l'ordre global de cette réaction par :
+$$\alpha = \sum_i \alpha_i$$
+\end{de}
+\subsubsection{Influence de la température}
+En faisant l'hypothèse que la réaction précedante, on montre que la constante k dépend de la température. On obtient la loi d'Arrhénus :
+$$k = Ae^{-\dfrac{E_{m,A}}{RT}}$$
+avec A le facteur d'Arrhénus, défini par l'experience et $E_{m,A}$ l'énergie d'activation molaire.
+\chapter{Étude de cinétique}
+\section{Méthode de séparation d'Ostwald}
+Cette méthode consite à augmenter les concentrations de tous les réactifs, sauf un, pour pouvoir étudier celui. Le rapport des concentrations doit être de 100 au moins. On néglige donc l'influence de tout les autres réactifs, on obtient donc un équation à un seul réactif, mais on conserve les n produits.
+\section{Reconnaisance des ordres par rapport à [A(t)]}
+Le but est d'obtenir comme courbe une fonction affine, pour pouvoir déterminer k facilement.\\
+Pour obtenir la fonction affine, on part de la défini de la vitesse :
+$$v = \dfrac{1}{\nu'_1}.\dfrac{d[A'_i(t)]}{dt} = -\dfrac{1}{\nu_1}.\dfrac{d[A_i(t)]}{dt} = \dfrac{dx(t)}{dt}$$
+Et on fait le lien avec l'expression en fonction de k et des concentrations.\\
+Soit a la concentration initiale.
+\begin{itemize}
+ \item[$\rightarrow$] Ordre 0 : On obtient une droite, de pente $-\nu k$ avec : $$y = [A(t)]$$
+ \item[$\rightarrow$] Ordre 1 : On obtient une droite, de pente $-\nu k$ avec : $$y = ln\left( \dfrac{a}{[A(t)]}\right) $$
+ \item[$\rightarrow$] Ordre 2 : On obtient une droite, de pente $\nu k$ avec : $$y = \left( \frac{1}{[A(t)]} - \frac{1}{a}\right) $$
+\end{itemize}
+\section{Réaction composée}
+Dans l'étude des réactions composée, on procède de la même façon que précédement, on considérant que soit, il s'effectue deux réactions opposé en parralèle, soit qu'on est dans le cas de réaction successives.

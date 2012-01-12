@@ -1,0 +1,79 @@
+\documentclass[a4paper,12 pt,oneside]{report}     % Type de document
+\usepackage[utf8x]{inputenc}			  % Utilisation du UTF8
+\usepackage{textcomp}				  % Accents dans les titres
+\usepackage [ french ] {babel}                    % Titres en français
+\usepackage [T1] {fontenc} 			  % Correspondance clavier -> document
+\usepackage[Lenny]{fncychap}                      % Beau Chapitre
+\usepackage{dsfont}                    	  	  % Pour afficher N,Z,D,Q,R,C
+\usepackage{fancyhdr}                             % Entete et pied de pages
+\usepackage [outerbars] {changebar}               % Positionnement barre en marge externe
+\usepackage{amsmath}				  % Utilisation de la librairie de Maths
+%\usepackage{amsfont}				  % Utilisation des polices de Maths
+\usepackage{cite}                                 % Citations de la bibliographie
+\usepackage{openbib}                              % Gestion avancée de Bibtex
+\usepackage{enumerate}				  % Permet d'utiliser la fonction énumerate
+\usepackage{dsfont}				  % Utilisation des polices Dsfont
+\usepackage{ae}					  % Rend le PDF plus lisible
+
+\newtheorem{de}{Définition}
+\newtheorem{theo}{Théorème}
+\newtheorem{prop}{Propriété}
+\newtheorem{voc}{Vocabulaire}
+\title{Étude d'un système de deux points materiels isolés}
+\author{MPSI}
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter{Référentiel barycentrique}
+Considérons un système composé de deux points materiels $M_1(m_1)$ et $M_2(m_2)$. Le système est notée S = $\{M_1,M_2\}$.\\
+\section{Barycentre}
+\begin{de}
+On défini le barycentre G, appelé aussi centre de gravité ou centre de masse, par la relation suivante :
+$$m_1\overrightarrow{OM_1} + m_2\overrightarrow{OM_2} = (m_1+m_2) \overrightarrow{OG}$$
+On obtient aussi la relation suivante : 
+$$m_1\overrightarrow{GM_1} + m_2\overrightarrow{GM_2} = \overrightarrow{0}$$
+\end{de}
+\section{Référentiel barycentrique}
+\begin{de}
+Soit $R^*$ le référentiel barycentrique  de S.\\
+$R^*$ à pour origine le barycentre G du système, et est en translation par rapport à un référentiel R galiléen, ce qui ce caractérise par : 
+$$\omega_{\dfrac{R^*}{R_g}} = 0$$
+\end{de}
+\begin{prop}
+Dans le cas où S est isolé, $R^*$ est en translation rectiligine uniforme par rapport à $R_G$, c'est donc un référentiel galiléen.
+\end{prop}
+\section{Théorème de la résultante cinétique}
+Par application du principe fondamentale de la dynamique à $M_1$ et à $M_2$, on obtient le théorème dit de la résultante cinétique :
+$$(m_1+m_2).\overrightarrow{a(G)}_R = \sum_{ext} \overrightarrow{F}$$ 
+avec : 
+$$\sum_{ext} \overrightarrow{F} = \sum_{ext \rightarrow 1} \overrightarrow{F} + \sum_{ext \rightarrow 2} \overrightarrow{F}$$
+\chapter{Élements cinétique dans $R^*$ galiléen}
+\section{Résultante cinétique}
+Par définition du barycentre, on obtient :
+$$\overrightarrow{p}(S)_{R^*} = \overrightarrow{0}$$
+\section{Moment cinétique}
+On obtient, dans $R^*$, l'expression suivante pour le moment cinétique, en posant $\overrightarrow{r}$=$\overrightarrow{M_2M_1}$ :
+$$\overrightarrow{L}(G)_{R^*} = \overrightarrow{r}\wedge\dfrac{m_1.m_2}{m_1+m_2}.\left( \dfrac{d\overrightarrow{r}}{dt}\right)_{R^*} $$
+\begin{prop}
+Dans $R^*$, le moment cinétique de S est independant du point d'observation, pour vu qu'il soit fixe.
+\end{prop}
+\section{Énergie cinétique}
+Soit $E_C(S)_{R^*}$ l'énergie cinétique de S dans $R^*$. On obtient : 
+$$E_C(S)_{R^*} = \dfrac{1}{2}\dfrac{m_1.m_2}{m_1+m_2}\left( \dfrac{d\overrightarrow{r}}{dt}\right) ^2$$
+\section{Particule fictive}
+Soit M une particule fictive de masse $\mu = \dfrac{m_1.m_2}{m_1+m_2}$ et de vecteur position $\overrightarrow{r}$. $\mu$ est appelé masse réduite.\\
+L'étude d'un système à deux points materiel se ramène à celle d'une particule fictive.\\
+On détermine le mouvement de $M_1$ et de $M_2$ à l'aide des relations homothétiques suivantes : 
+$$\overrightarrow{GM_1} = \dfrac{m_2}{m_1+m_2}\overrightarrow{r}$$
+$$\overrightarrow{GM_2} = \dfrac{-m_1}{m_1+m_2}\overrightarrow{r}$$
+\chapter{Étude du mouvement d'un système de deux points materiel isolé, en interaction newtonienne}
+Nous allons étudier le système dans le cadre d'une interaction gravitationelle, mais toutes les relations seront verifié pour toutes interactions newtonienne.\\
+Nous allons tout d'abord faire l'étude du mouvement de la particule fictive.
+\section{Énergie potentielle de gravitation}
+On obtient la même expression pour l'énergie potentielle que dans le cas d'un point materiel soumis à une force centrale : 
+$$E_p = \dfrac{-G.m_1.m_2}{r}$$
+\section{Énergie mécanique}
+On obtient l'expression de l'énergie mécanique d'un point materiel soumis à une force conservative : 
+$$E_m(S)_{R^*} = E_C(S)_{R^*} + E_p(r) = cte$$
+\section{Nature de la trajectoire, équation du mouvement} 
+\end{document}

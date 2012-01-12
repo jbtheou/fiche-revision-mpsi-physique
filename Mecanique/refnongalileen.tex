@@ -1,0 +1,130 @@
+\chapter{Référentiel non-galiléen}
+\section{Principe fondamental de la dynamique}
+\subsection{Dans un référentiel galiléen}
+\begin{de}
+Soit M(m) un point materiel de masse m observé dans le référentiel $R_G$ galiléen.\\
+Le principe fondamental de la dynamique postule que :
+$$\Sigma \overrightarrow{F} = m.\overrightarrow{a}(M)_R$$
+\end{de}
+\begin{prop}
+Un repère galiléen est défini uniquement par l'experience, ce qui complique sa définition.
+\end{prop}
+\subsection{Dans un référentiel non-galiléen}
+D'après la loi de composition de l'accélération, et du principe fondamental de la dynamique, on obtient dans un réferentiel non-galiléen :
+$$m.\overrightarrow{a}(M)_{R_{NG}} = \Sigma \overrightarrow{F} + \overrightarrow{f}_{ie} + \overrightarrow{f}_{ic}$$
+Avec : 
+$$\left\{\begin{array}{l}
+   \overrightarrow{f}_{ie} = -m.\overrightarrow{a}_e  : \mbox{Force d'inertie d'entrainement}\\
+   \overrightarrow{f}_{ic} = -m.\overrightarrow{a}_c  : \mbox{Force d'inertie de Coriolis}\\
+  \end{array}\right.$$
+\subsection{Forme explicite des forces d'inerties}
+\subsubsection{Pour une translation}
+\begin{de}
+Soit $R_G$ un réferentiel galiléen et $R_{N_G}$ un réferentiel non galiléen en translation (non uniforme) par rapport à $R_G$ : 
+$$\left\{\begin{array}{l}
+   \overrightarrow{f}_{ie} = -m.\overrightarrow{a}(O)_{R_G}  : \mbox{Force d'inertie d'entrainement}\\
+   \overrightarrow{f}_{ic} = \overrightarrow{0}  : \mbox{Force d'inertie de Coriolis}\\
+  \end{array}\right.$$
+On observe bien que, si la translation est uniforme, donc pour $\overrightarrow{a}(O)_{R_G} = 0$, le référentiel $R_G$ est galiléen.
+\end{de}
+\subsubsection{Pour une rotation uniforme autour d'un axe fixe}
+\begin{de}
+Soit $R_{N_G}$ un réferentiel non galiléen, animé d'une rotation uniforme autour d'un axe fixe de $R_G$ : 
+$$\left\{\begin{array}{l}
+   \overrightarrow{f}_{ie} = m\omega^2\overrightarrow{HM}  : \mbox{Force d'inertie d'entrainement}\\
+   \overrightarrow{f}_{ic} = -2.m.\overrightarrow{\omega}_{\frac{R_{N_G}}{R_G}}\wedge\overrightarrow{v}(M)_{R_{N_G}}  : \mbox{Force d'inertie de Coriolis}\\
+  \end{array}\right.$$
+\end{de}
+\section{Théorème généraux dans $R_{N.G}$}
+\subsection{Théorème de l'énergie cinématique}
+On obtient le théorème de l'énergie cinétique dans un repère non galiléen :
+$$dE_C(M)_{R_{N.G}} = \Sigma \delta \omega + \overrightarrow{f}_{ie}.\overrightarrow{dl} + \overrightarrow{f}_{ic}.\overrightarrow{dl}$$
+En explicitant, sachant que $\overrightarrow{f}_{ic}\bot\overrightarrow{dl}$, on obtient :
+$$dE_C(M)_{R_{N.G}} = \Sigma \delta \omega + \overrightarrow{f}_{ie}.\overrightarrow{dl}$$
+\subsection{Théorème du moment cinétique}
+On obtient : 
+$$\left(\dfrac{d\overrightarrow{L}(O)_{R_{N.G}}}{dt} \right)_{R_{N.G}} = \Sigma \overrightarrow{M}(O)_F + \overrightarrow{M}_{ie} +  \overrightarrow{M}_{ic}$$
+avec : 
+$$\left\{\begin{array}{l}
+   \overrightarrow{M}_{ie} = \overrightarrow{OM}\wedge\overrightarrow{f}_{ie}\\
+   \overrightarrow{M}_{ic} = \overrightarrow{OM}\wedge\overrightarrow{f}_{ic}\\
+
+  \end{array}\right.$$
+\section{Statique dans le référentiel Terrestre}
+Soit $R_{GO}$ le référentiel géocentrique, supposé galiléen.
+\begin{de}
+On appelle référentiel Terrestre, noté $R_T$, le référentiel qui possède comme origine le barycentre des masses de la Terre, avec trois axes orientés vers trois étoiles lointaines, supposé fixe.\\
+Par définition, le référentiel Terrestre $R_T$ est en rotation uniforme autour d'un axe fixe de $R_{GO}$.\\
+Si $R_{GO}$ est supposé galiléen, $R_T$ est donc non galiléen.
+\end{de}
+\begin{de}
+ Soit M(m) un point matériel de masse m au repos dans $R_T$ non galiléen, à la surface Terrestre.\\
+On appelle base locale de projection le trièdre orthonormé direct  ($\overrightarrow{u}_V;\overrightarrow{u}_E;\overrightarrow{u}_N$), avec : 
+$$\left\{\begin{array}{l}
+   \overrightarrow{u}_{e} : \mbox{Vecteur orienté vers l'est}\\
+   \overrightarrow{u}_{v} : \mbox{Vecteur orienté de direction vertical}\\
+   \overrightarrow{u}_{n} : \mbox{Vecteur orienté vers le nord}\\
+  \end{array}\right.$$
+\end{de}
+Soit $\lambda$ la latitude du lieu ( angle entre l'équateur et le point materiel). Par projectoire de $\overrightarrow{\omega}_{\frac{R_T}{R_{GO}}}$ dans la base ($\overrightarrow{u}_v;\overrightarrow{u}_e;\overrightarrow{u}_n$), on obtient : 
+$$\overrightarrow{\omega}_{\frac{R_T}{R_{GO}}} = \omega_{\frac{R_T}{R_{GO}}}cos(\lambda)\overrightarrow{u}_n + \omega_{\frac{R_T}{R_{GO}}} sin(\lambda)\overrightarrow{u}_v$$
+\subsection{Définition du poids d'un corps}
+\begin{de}
+ On appelle poids d'un point materiel M(m) de masse m l'opposé de la tension T qu'exercerai un fil à plomb sur M au repos dans le référentiel d'étude.\\
+Le poid est noté : 
+$$\overrightarrow{p} = m.\overrightarrow{g}$$
+\end{de}
+Dans un référentiel non galiléen, on obtient : 
+$$\overrightarrow{p} = \dfrac{-G.m.M_T}{R_T^2} \overrightarrow{u}_R + m.\omega^2.\overrightarrow{HM}$$
+$$\overrightarrow{g} = \dfrac{-G.M_T}{R_T^2} \overrightarrow{u}_R + \omega^2.\overrightarrow{HM}$$
+\subsubsection{Ordre de grandeur}
+Le terme d'inertie est nul aux pôles, et maximum à l'équateur où il s'oppose à la force de gravitation.\\
+L'écart qu'il y a entre la gravité aux pôles et à l'équateur est dù pour $\dfrac{2}{3}$ au terme d'inertie et pour $\dfrac{1}{3}$ à l'applatisement de la Terre au niveau des pôles.
+\subsection{Energie potentielel de pesenteur}
+\begin{prop}
+Le poids est une force conservative qui dérive de la fonction énergie potentielle de pesenteur, définie dans $R_T$ non galiléen par : 
+$$E_{pp} = \dfrac{-G.M_T.m}{r} - \dfrac{m.(\omega.r.cos(\lambda))^2}{2} + A$$ 
+\end{prop}
+\section{Dynamique dans le référentiel Terrrestre}
+\subsection{Point materiel en mouvement dans le plan horizontale}
+Soit M(m) un point materiel en mouvement dans le plan horizontale, à la surface Terrestre.\\
+Dans $R_T$ non galiléen, sa vitesse est quelconque.\\
+On obtient l'expression de la force d'inertie de Coriolis : 
+$$\overrightarrow{f}_{ic} = \overrightarrow{f}_{ic_{vect}} + \overrightarrow{f}_{ic_{horiz}}$$
+avec : 
+$$\left\{\begin{array}{l}
+   \overrightarrow{f}_{ic_{vect}}  = -2.m.\omega.cos(\lambda)\overrightarrow{u}_n\wedge\overrightarrow{v}(M)_{R_T} \mbox{ Force d'inertie de Coriolis vertical}\\
+\overrightarrow{f}_{ic_{horiz}}  = -2.m.\omega.sin(\lambda)\overrightarrow{u}_v\wedge\overrightarrow{v}(M)_{R_T} \mbox{ Force d'inertie de Coriolis horizontale}\\
+  \end{array}\right.$$
+La composante verticale s'ajoute, ou se soustrait au poids. La composante horizontale dévie M vers la droite dans l'hémisphère Nord ($sin(\lambda) > 0$). On observe cette déviation sur le pendule de Foucault par exemple.
+\subsection{Point materiel en mouvement verticale}
+Soit M(m) un point materiel en chute libre dans $R_T$ non galiléen.\\
+Par application du P.F.D, et sachant que, pour une chute libre, dans un référentiel galiléen, nous avons : 
+$$\left\{\begin{array}{l}
+   \mathring{z}(t) = -gt\\
+   z(t) = -\dfrac{1}{2}gt^2+h\\
+  \end{array}\right.$$
+On obtient : 
+$$\left\{\begin{array}{l}
+   \mathring{x}\mathring{}(t) = -2.\omega.\mathring{z}.cos(\lambda) + 2.\omega.\mathring{y}.sin(\lambda)\\
+   \mathring{y}\mathring{}(t) = -2.\omega.\mathring{x}.sin(\lambda)\\
+   \mathring{z}\mathring{}(t) = -g + 2.\omega.\mathring{x}.cos(\lambda)\\
+  \end{array}\right.$$
+Appliquons la méthode dites des perturbations.\\
+Par application de cette méthode, on obtient : 
+$$\left\{\begin{array}{l}
+   x(t) = \dfrac{\omega.g.t^3}{3}.cos(\lambda) \\
+   y(t) = 0\\
+   z(t) = \dfrac{-g.t^2}{2} + h\\
+  \end{array}\right.$$
+\section{Marée océanique}
+Nous avons supposé précédement que le réferentiel géocentrique est un référentiel galiléen. En réalité, le référentiel est non galiléen, car il est en translation circulaire et uniforme par rapport au référentiel héliocentrique. Etudions l'influence du Soleil sur la Terre.\\
+\subsection{Champs de Marée}
+Soit $\overrightarrow{f}_{ie}$ la force d'inertie d'entrainement défini par : 
+$$\overrightarrow{f}_{ie} = m.\omega^2\overrightarrow{HM}$$
+Soit $\overrightarrow{F}_{S\rightarrow M}$ la force de gravitation exercée par le Soleil sur le point materiel M, de masse m.\\
+On obtient la relation suivante : 
+$$\overrightarrow{f}_{ie} + \overrightarrow{F}_{S \rightarrow M} = m.\overrightarrow{C}(M)$$
+avec $\overrightarrow{C}$(M) le champs de marée ressenti en M.
+Nous retiendrons que si le point M est situé en face du soleil, la force est attractive. Si le point M est opposé au soleil, la force est répulsive. On observe donc pour cette force un effet dislocateur. 
+

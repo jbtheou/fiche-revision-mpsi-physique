@@ -1,0 +1,51 @@
+\documentclass[a4paper,12pt,oneside]{report}
+
+\usepackage[utf8x]{inputenc}			  % Utilisation du UTF8
+\usepackage{textcomp}				  % Accents dans les titres
+\usepackage [ french ] {babel}                    % Titres en français
+\usepackage [T1] {fontenc} 			  % Correspondance clavier -> document
+\usepackage[Lenny]{fncychap}                      % Beau Chapitre
+\usepackage{dsfont}                    	          % Pour afficher N,Z,D,Q,R,C
+\usepackage{fancyhdr}                             % Entete et pied de pages
+\usepackage [outerbars] {changebar}               % Positionnement barre en marge externe
+\usepackage{amsmath}				  % Utilisation de la librairie de Maths
+%\usepackage{amsfont}				  % Utilisation des polices de Maths
+\usepackage{cite}                                 % Citations de la bibliographie
+\usepackage{openbib}                              % Gestion avancée de Bibtex
+\usepackage{enumerate}				  % Permet d'utiliser la fonction énumerate
+\usepackage{dsfont}				  % Utilisation des polices Dsfont
+\usepackage{ae}					  % Rend le PDF plus lisible
+
+\newtheorem{de}{Définition}
+\newtheorem{theo}{Théorème}
+\newtheorem{prop}{Propriété}
+
+\title{Energie d'un point materiel}
+\author{MPSI}
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter{Puissance et travail d'une force}
+\section{Puissance}
+\begin{de}
+Soit M(m) un point materiel observé dans un référentiel R et animé de la vitesse $\overrightarrow{V}(M)_R$.\\
+Supposons que M soit soumis à l'action d'une force $\overrightarrow{F}$.\\
+La puissance associé à cette force à chaque instant est défini par :
+$$P = \overrightarrow{F}.\overrightarrow{V}(M)_R$$
+L'unité de P est le Watt.
+\end{de}
+\begin{prop}
+Si M(m) est soumis à un ensemble de force $\Sigma \overrightarrow{F}$, alors :
+$$P = \sum_i P_i$$
+avec :
+$$P_i = \overrightarrow{F_i}.\overrightarrow{V}(M)_R$$
+\end{prop}
+\section{Travail d'une force}
+\begin{de}
+Le travail d'une force $\overrightarrow{F}$ entre t et t+dt dans le referentiel R est donnée par :
+$$\delta\omega = P.dt$$
+On obtient aussi la formule :
+$$\delta\omega = \overrightarrow{F}.\overrightarrow{dl}$$
+\end{de}
+
+\end{document}

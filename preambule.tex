@@ -1,0 +1,108 @@
+% ************************
+% * fichier de préambule *
+% ************************
+ 
+% ***** extensions *****
+\def\renamesymbol#1#2{
+  \expandafter\let\expandafter\newsym\expandafter=\csname#2\endcsname
+  \expandafter\global\expandafter\let\csname#1#2\endcsname=\newsym
+  \expandafter\global\expandafter\let\csname#2\endcsname=\origsym
+}
+
+\usepackage[utf8x]{inputenc}			  % Utilisation du UTF8
+\usepackage{textcomp}				  % Accents dans les titres
+\usepackage [ french ] {babel}                    % Titres en français
+\usepackage [T1] {fontenc} 			  % Correspondance clavier -> document
+\usepackage{wasysym}
+\renamesymbol{wasysym}{iint}
+\renamesymbol{wasysym}{iiint}
+\usepackage[Lenny]{fncychap}                      % Beau Chapitre
+\usepackage{dsfont}                    	  % Pour afficher N,Z,D,Q,R,C
+\usepackage{fancyhdr}                             % Entete et pied de pages
+\usepackage [outerbars] {changebar}               % Positionnement barre en marge externe
+\usepackage{amsmath}				  % Utilisation de la librairie de Maths
+%\usepackage{amsfont}				  % Utilisation des polices de Maths
+\usepackage{enumerate}				  % Permet d'utiliser la fonction énumerate
+\usepackage{dsfont}				  % Utilisation des polices Dsfont
+\usepackage{ae}					  % Rend le PDF plus lisible
+\usepackage[pdftex]{graphicx}                 % derniÃ¨re Ã©tant la langue principale
+\usepackage{color}
+\usepackage{palatino}
+\usepackage{paralist}
+\usepackage{natbib}
+\usepackage[margin=3cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage[Lenny]{fncychap}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{url}
+\usepackage{graphics}
+
+\definecolor{Dark}{gray}{.2}
+\definecolor{Medium}{gray}{.6}
+\definecolor{Light}{gray}{.8}
+\newcommand*{\plogo}{\fbox{$\mathcal{PL}$}}
+
+
+\newtheorem{de}{Définition}
+\newtheorem{theo}{Théorème}
+\newtheorem{prop}{Propriété}
+\newtheorem{princ}{Principe}
+\newtheorem{conv}{Convention}
+\newtheorem{loi}{Loi}
+\newtheorem{voc}{Vocabulaire}
+\newtheorem{enon}{\'Enonc\'e}
+\newtheorem{nota}{Nota}
+
+
+
+\newlength{\drop}
+
+
+\newcommand*{\titleGMPHY}{\begingroup% Gentle Madness
+\setlength{\drop}{0.1\textheight}
+%\vspace*{\baselineskip}
+\vfill
+  \hbox{%
+  \hspace*{0.2\textwidth}%
+  \rule{1pt}{\textheight}
+  \hspace*{0.05\textwidth}%
+  \parbox[b]{0.75\textwidth}{
+  \vbox{%
+    %\vspace{\drop}
+    {\noindent\Huge\bfseries Fiches de Révision\\[0.5\baselineskip]
+               MPSI}\\[2\baselineskip]
+    {\Large\itshape TOME I - Physique et Chimie}\\[4\baselineskip]
+    {\Large Jean-Baptiste Théou}\par
+    \vspace{0.5\textheight}
+    {\noindent Creactive Commons - Version 0.1}\\[\baselineskip]
+    }% end of vbox
+    }% end of parbox
+  }% end of hbox
+
+\null
+\endgroup}
+
+\newcommand*{\titleGMMATH}{\begingroup% Gentle Madness
+\setlength{\drop}{0.1\textheight}
+%\vspace*{\baselineskip}
+\vfill
+  \hbox{%
+  \hspace*{0.2\textwidth}%
+  \rule{1pt}{\textheight}
+  \hspace*{0.05\textwidth}%
+  \parbox[b]{0.75\textwidth}{
+  \vbox{%
+    %\vspace{\drop}
+    {\noindent\Huge\bfseries Fiches de Révision\\[0.5\baselineskip]
+               MPSI}\\[2\baselineskip]
+    {\Large\itshape TOME II - Mathématiques}\\[4\baselineskip]
+    {\Large Jean-Baptiste Théou}\par
+    \vspace{0.5\textheight}
+    {\noindent Creactive Commons}\\[\baselineskip]
+    }% end of vbox
+    }% end of parbox
+  }% end of hbox
+
+\null
+\endgroup}

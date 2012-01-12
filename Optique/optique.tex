@@ -1,0 +1,169 @@
+
+%%% Relecture : 20 novembre 2008
+\chapter{Optique géométrique}
+\section{Généralités}
+Considérons une onde lumineuse.\
+Soit $\lambda$ sa longeur d'onde, T sa periode spatiale.\
+Notons n l'indice du milieu, avec n($\lambda$) dans le cas d'un milieu dispersif.
+\begin{itemize}
+ \item[$\rightarrow$] Soit c, la célérité de la lumière : $$\lambda = c.T~ (\mbox{Dans le vide})$$
+ \item[$\rightarrow$] Soit v, la vitesse du rayon dans un milieu d'indice n : $$v = \dfrac{c}{n}$$
+\end{itemize}
+Dans un prisme, une source polychromatique (ex : lumière blanche) est décomposée, avec sa composante bleue qui est plus déviée que sa composante rouge.\
+Dans un milieu homogène, la lumière se propage en ligne droite
+\subsection{Vocabulaire}
+Plus un milieu possède un indice important, plus on dit de celui-ci qu'il est réfringent.\
+Un milieu est dit homogène si ses propriétés physiques sont invarentes
+\section{Relations de Snell-Descartes}
+\begin{de}
+Considérons deux mileux (homogènes) d'indices différents ($n_1$ et $n_2$).\
+On appelle dioptre, la surface de séparation entre ces deux mileux.\
+On appelle plan d'incidence, notée $\pi$, le plan défini par le rayon incident, et la normale en I, le point où le rayon touche le dioptre.\
+Sur le dioptre, le rayon incident subit une réflexion et une réfraction. Ces rayons vérifient les lois de Snell-Descartes.
+\end{de}
+\subsection{Lois de Snell-Descartes}
+Soit $n_1,n_2$ les indices respectifs des milieux 1 et 2.\
+Soit $i_1,i_2$ les angles respectivement formés avec la normale par le rayon incident et le rayon réfracté.
+\begin{itemize}
+ \item[$\rightarrow$] Le rayon réflechi et le rayon réfracté sont dans le plan d'incidence $\pi$
+ \item[$\rightarrow$] Le rayon réflechi est symétrique au rayon incident par rapport à la normale
+ \item[$\rightarrow$] Loi des sinus : $n_1sin(i_1)=n_2sin(i_2)$
+\item[$\rightarrow$] Loi de retour inverse : Si un rayon va du point A au point B, il utilisera le même itinéraire pour faire le chemin inverse.
+\end{itemize}
+\subsection{Angle limite et reflexion totale}
+Considérons un rayon évoluant d'un milieu plus réfringent vers un milieu moins réfringent ($n_2$<$n_1$).\
+À l'aide de la loi des sinus, on observe l'existence d'un angle limite, notée $i_L$ :
+$$sin(i_L) = \dfrac{n_2}{n_1}$$
+Pour tous rayons ayant un angle d'incidence i > $i_L$, il y a réflexion totale dans le milieu le plus réfrigent.
+\subsection{Milieu inhomogène}
+Considérons un milieu inhomogène. Nous avons les lois suivantes :
+\begin{itemize}
+ \item[$\rightarrow$] n(z).sin(i(z)) = constante
+ \item[$\rightarrow$] Le rayon lumineux fui les indices importants.
+ \item[$\rightarrow$] Le rayon lumineux reste confiné dans une gaine par le phénomène de réflexion totale, quand i>$i_L$ 
+\end{itemize}
+\section{Principe de Fermat}
+\begin{de}
+Le chemin optique entre deux points quelconques A et B, notée $L_{AB}$, est défini par :
+$$L_{AB} = \int_a^b n.dl$$
+avec n, indice du milieu.
+\end{de}
+\begin{princ}
+Le chemin optique effectivement suivi par la lumière est stationnaire.
+\end{princ}
+Grâce à ce principe et cette définition, on peut retrouver toutes les relations de Snell-Descartes.
+\section{Déviation}
+\begin{de}
+Considérons un système optique, noté S.O.\
+On appelle déviation d'un rayon lumineux par un S.O. l'angle entre le rayon incident et le rayon émergent.\
+Si l'on convient d'une orientiation des angles, la déviation, notée D, peut être algébrique.
+\end{de}
+\section{Vision d'image, conditions de Gauss}
+\begin{de}
+En optique géométrique, une image résulte de l'intersection de rayons ou de supports de rayons issus d'un même point objet.
+\end{de}
+\begin{de}
+On appelle axe optique l'axe de symétrique du S.O. orienté dans la direction du rayon incident.
+\end{de}
+\subsection{Réel et Virtuel}
+On défini des objets réels et virtuels, respectivement des images réelles et virtuelles, de la façon suivantes
+\begin{center}
+% use packages: array
+\begin{tabular}{|l|l|l|}
+\hline
+ & Réel & Virtuel \\\hline
+Objet (Rayon incident) & Vient de l'objet & Semble converger vers l'objet \\\hline
+Image (Rayon emergent)& Converge vers l'image & Semble provenir de l'image \\\hline
+\end{tabular}
+\end{center}
+\begin{de}
+On dit d'un système optique qu'il est stigmatique pour un couple de points (A,A'), si tous rayons issus de A passe par A' après avoir traversé le S.O.\
+Le seul système optique rigoureusement stigmatique est le mirroir plan.
+\end{de} 
+\begin{de}
+On dit d'un système optique qu'il est aplanétique si l'image A'B' de l'objet AB, normal à l'axe optique, et également normal à l'axe optique
+\end{de} 
+\section{Conditions de Gauss}
+En général, un système optique peut satisfaire un stigmatisme approché dans un S.O. en se placant dans les conditions de Gauss :
+\begin{itemize}
+ \item[$\rightarrow$] Le rayon lumineux est peu incliné par rapport à l'axe optique
+ \item[$\rightarrow$] Le rayon lumineux est peu éloigné de l'axe optique
+\end{itemize}
+Hors de ces conditions, on risque d'observer une image floue, accompagnée d'abérations chromatiques et géométriques.
+\section{Miroir sphérique dans les conditions de Gauss}
+La notation $\overline{X}$ signifie que X est une grandeur algébrique.
+\begin{de}
+Considérons un miroir sphérique.\
+On appelle sommet, noté S, l'intersection du miroir avec l'axe optique. On note C, le centre de courbure de la calotte sphérique et F le foyer, telque :
+$$\overline{SF} = \dfrac{\overline{SC}}{2}$$
+\end{de}
+Dans l'étude d'un miroir sphérique, nous avons les propriétés suivantes :
+\begin{itemize}
+ \item[$\rightarrow$] Un rayon lumineux incident parallèle à l'axe optique passe par un point particulier qu'on appelle foyer, noté F, à la réflexion.
+ \item[$\rightarrow$] Un rayon incident passant par F est réfléchi parallèlement à l'axe optique.
+ \item[$\rightarrow$] Un rayon incident passant par C repasse par ce point à la réflexion.
+ \item[$\rightarrow$] Tous rayons passant par S est réfléchi symétriquement par rapport à l'axe optique.
+\end{itemize}
+\subsection{Grandissement et relation de conjugaison}
+\begin{de}
+On appelle grandissement, noté $\gamma$, le rapport de la dimension de l'image $\overline{A'B'}$ sur celle de l'objet $\overline{AB}$
+$$\gamma = \dfrac{\overline{A'B'}}{\overline{AB}}$$
+\end{de}
+\begin{prop}
+On défini la relation de conjugaison d'un S.O., relative à une origine, à l'aide de la relation de Thales.\
+Pour un miroir sphérique avec origine au sommet, on obtient :
+$$\dfrac{1}{\overline{SA'}} + \dfrac{1}{\overline{SA}} = \dfrac{1}{\overline{SF}}$$
+\end{prop}
+\subsection{Plan focal et foyer secondaire}
+\begin{de}
+On appelle plan focal, noté $\pi$, la plan normal à l'axe optique passant par le foyer F.\
+Tous points du plan focal constitue un foyer secondaire 
+\end{de}
+On utilise un foyer secondaire dans l'étude d'un faisceau de lumière parallèle arrivant incliné par rapport à l'axe optique.
+\section{Lentille mince dans les conditions de Gauss}
+Une lentille mince résulte de l'association de deux dioptres sphériques, généralement l'un en Flint et l'autre en Crown.\
+On dit d'une lentille qu'elle est mince quand son épaisseur "e" est négligable devant chacun des rayons de courbure des dioptres sphériques.\
+\subsection{Lentille convergente}
+Ces lentilles vérifient une série de propriétés : 
+\begin{itemize}
+ \item[$\rightarrow$] Tous rayons incidents parallèles à l'axe optique d'une lentille convergente passe par un point particulier appelé foyer image de la lentille, noté F'.
+ \item[$\rightarrow$] Une lentille est symétrique dans son action sur la lumière. A tous foyers images F' on associe un foyer objet F par symétrie par rapport à O.
+ \item[$\rightarrow$] Tous rayon incident passant par F, le foyer objet, donne un rayon parallèle à l'axe optique après la traversée d'une lentille convergente.
+ \item[$\rightarrow$] Tous rayons incidents passant par O, le centre de la lentille, n'est pas déviés.
+\end{itemize}
+\subsection{Lentille divergente}
+Ces lentilles vérifient une série de propriétés : 
+\begin{itemize}
+  \item[$\rightarrow$] Tous rayons incidents dont le support passe par le foyer F d'une lentille divergente donne un rayon parallèle à l'axe optique après passage du S.O.
+ \item[$\rightarrow$] Une lentille est symétrique dans son action sur la lumière. A tous foyers images F' on associe un foyer objet F par symétrie par rapport à O.
+  \item[$\rightarrow$] Tous rayons incidents parallèles à l'axe optique d'une lentille divergente donne un rayon divergent donc le support passe par le foyer image F'
+ \item[$\rightarrow$] Tous rayons incidents passant par O, le centre de la lentille, n'est pas déviés.
+\end{itemize}
+\subsection{Distance focale et vergence}
+\begin{de}
+On appelle distance focale image, la distance entre le centre optique O d'une lentille et le foyer image F' :
+$$f' = \overline{OF'}$$
+Pour les lentilles convergentes, f'>0, pour les lentilles divergentes, f'<0
+\end{de}
+\begin{de}
+On appelle vergence d'une lentille l'inverse de la distance focale :
+$$v = \dfrac{1}{f'}$$
+L'unité de la vergence est la dioptrie, notée $\delta$
+\end{de}
+\subsection{Relation de conjugaison}
+Dans le cas d'une lentille mince, la relation de conjugaison est obtenue grâce à la relation de Thalès : 
+$$\dfrac{1}{\overline{OA'}} - \dfrac{1}{\overline{OA}} = \dfrac{1}{f'}$$
+\subsection{Plan focal et foyer secondaire}
+\begin{de}
+Le plan focal est défini comme la perpendiculaire à l'axe optique passant par un foyer.\
+Pour une lentille mince, on défini le plan focal objet, noté $\pi$, et le plan focal image, noté $\pi'$. 
+\end{de}
+On associe à ce plan focal un ensemble de propriétés : 
+\begin{itemize}
+ \item[$\rightarrow$] Un faiseau de lumière parallèle, incliné par rapport à l'axe optique d'une lentille convergente focalise en un point sur le plan focal objet, appelé foyer secondaire.\
+Sa position est donnée par un rayon incident passant par O.
+\item[$\rightarrow$] Un faiseau de lumière parallèle incliné par rapport à l'axe optique d'une lentille divergente donne un faisceau divergent dont le support focalise en un point sur le plan focal image, appelé foyer secondaire.\
+Sa position est donnée par un rayon incident passant par O.
+\end{itemize}
+Grâce à ces propriétés, on peut étudier tous types de rayons incidents. On dit que l'objet est à l'infini ou que l'image d'un objet est à l'infini si respectivement les rayons incidents ou émergents sont parallèles à l'axe optique
+

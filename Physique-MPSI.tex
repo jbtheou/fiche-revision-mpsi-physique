@@ -1,0 +1,98 @@
+% % % % % % % % % % Tout ce qui est mis derriÃ¨re un Â«Â %Â Â» n'est pas vu par LaTeX
+% On appelle cela des Â«Â commentairesÂ Â».  Les commentaires permettent de
+% commenter son document - comme ce que je suis en train de faire
+% actuellement - et de cacher du code - cf. la ligne \pagestyle.
+
+\documentclass[a4paper, titlepage, draft,twoside]{book}
+
+\include{preambule}
+
+\begin{document}
+
+\pagestyle{empty}
+\titleGMPHY
+\clearpage
+\frontmatter                  % Prologue.
+\chapter{Licence}
+J'ai décidé d'éditer cet ouvrage sous la licence Créative Commons suivante : CC-by-nc-sa. Pour plus d'information :\\
+http://creativecommons.org/licenses/by-nc-sa/2.0/fr/.\\
+Ce type de licence vous offre une grande liberté, tout en permettant de protéger mon travail contre une utilisation commercial à mon insu par exemple.\\
+Pour plus d'information sur vos droits, consultez le site de Créative Commons
+\chapter{Avant-propos}
+Il y a un plus d'un an, au milieu de ma SUP MP, j'ai décidé de faire mes fiches de révision à l'aide de Latex, un "traitement de texte" très puissant. Il en résulte les fiches qui suivent. Je pense que travailler sur des fiches de révision, totalement séparé de notre cours, est un énorme plus, et réduit grandement la quantité de travail pour apprendre son cours, ce qui laisse plus de temps pour les exercices. Mon experience en tout cas va dans ce sens, j'ai notablement progressé à l'aide de ces fiches.\\
+J'ai décidé de les rassembler sous forme d'un "livre", ou plutôt sous forme d'un recueil. Ce livre à pour principal interet pour moi d'être transportable en cours. C'est cet interet qui m'a poussé à faire ce livre.\\
+Dans la philosophie de mes fiches de révision, ce livre est disponible gratuitement et librement sur mon blog. Il est édité sous License Créative Commons. Vous pouvez librement adapter ce libre à vos besoins, les sources Latex sont disponibles sur mon blog. Je pense que pour être en accord avec la philosophie de ces fiches, il serai bien que si vous effectuez des modifications de mon ouvrage, vous rendiez ces modifications disponible à tous. Je laisserai volontiers une place pour vos modifications sur mon blog. Je pense sincèrement que ce serai vraiment profitable au plus grand nombre, et dans la logique de mon travail.\\
+J'ai hiérarchisé mon ouvrage de façon chronologique. Les parties sont rangées dans l'ordre "d'apparition" en MPSI. J'ai mis en Annexe des petites fiches de méthodologie, qui peuvent s'avérer utiles.\\
+Je vous souhaite une bonne lecture, et surtout une bonne réussite.\\
+Jean-Baptiste Théou
+\chapter{Remerciements}
+Je tient à remercier tout particulièrement Yann Guillou, ex Professeur de Physique-Chimie en MPSI au Lycée Lesage, actuellement en poste en Guadeloupe, qui m'a permis de consolider mes connaisances en physique et qui m'a ouvert les yeux sur la réalité de la physique et sur son histoire. Ces "digressions historiques" resterons de bons moments dans mon esprit, pour longtemps. Je remercie aussi Paul Maheu, Professeur de Mathématiques en MPSI au Lycée Lesage, qui m'a permis d'aquérir de solides connaisances en Mathématiques.\\
+Sans eux, ce livre ne pourrai exister.\\
+Pour finir, je me dois à mon avis d'insérer cette citation dans mon ouvrage, citation que nous a donné Mr Guillou pour nos premiers coups de crayon en Prépa. Elle est à méditer ....
+  \begin{flushright}
+    \begin{tabular}{@{}p{6cm}@{}}
+      {\raggedleft \itshape Je suis convaincu qu'il est plus bénéfique pour un étudiant de retrouver des démonstrations à partir de quelques indications que de les lire et de les relire ....\\
+      Qu'il les lisent une fois, qu'il les retrouvent souvent\par}\\
+
+   {\raggedleft \textsc{Srinivâsa Aiyangâr Râmânujan}(1886-1920)\par}
+
+ \end{tabular}
+
+\end{flushright}
+
+
+
+
+\mainmatter                   % On passe aux choses serieuses
+\part{Optique}
+\setcounter{chapter}{0}
+\include{Optique/optique} % Relue
+\part{M\'ecanique}
+    \setcounter{chapter}{0}
+\include{Mecanique/cinematiquedupoint} % Relue
+\include{Mecanique/Principefondamental} % Relue
+\include{Mecanique/Energiedunpoint} % Relue
+\include{Mecanique/oscillationforcee} % Relue
+\include{Mecanique/forcecentrale} % Relue
+\include{Mecanique/Changementdereferentiel} % Relue
+\include{Mecanique/refnongalileen} % Relue
+\include{Mecanique/deuxpointmateriel} % Relue
+\part{\'Electricit\'e}
+\setcounter{chapter}{0}
+\include{Electricite/generalitecircuit} % Relue
+\include{Electricite/theoremegeneraux} % Relue
+\include{Electricite/regimetransitoire} % Relue
+\include{Electricite/regimesinusoidaleforce} % Relue
+\include{Electricite/diagrammedebode} % Relue
+\part{\'Electrostatique}
+\setcounter{chapter}{0}
+\include{Electrostatique/mouvementparticulecharge} % Relue
+\include{Electrostatique/chargeelec} % Relue
+\include{Electrostatique/Circulationetflux} % Relue
+\include{Electrostatique/dipoleelectrique} % Relue
+\part{Magn\'etostatique}
+\setcounter{chapter}{0}
+\include{Magnetostatique/Magnetostatique} % Relue
+\part{Thermodynamique}
+\setcounter{chapter}{0}
+\include{Thermodynamique/Termo} % Relue
+\part{Thermochimie}
+\setcounter{chapter}{0}
+\include{Thermodynamique/Thermochimie} % Relue
+\part{Chimie}
+\setcounter{chapter}{0}
+\include{Chimie/chimiedessolutions} % Relue
+\include{Chimie/oxydoreduction} % Relue
+\include{Chimie/cinetiquechimique} % Relue
+\include{Chimie/mecanismereactionnels} % Relue
+\part{Architecture de la matière}
+ \setcounter{chapter}{0}
+\include{Methodologie/Architechture}
+\appendix                     % Les annexes
+\part{Annexe}
+\include{Methodologie/Outilsmath}
+\include{Methodologie/equadiffcroisee}
+\include{Methodologie/notationcomplexe}
+\backmatter
+\tableofcontents            % Table des matières
+\end{document}

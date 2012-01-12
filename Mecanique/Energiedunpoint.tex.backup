@@ -1,0 +1,102 @@
+\documentclass[a4paper,12pt,oneside]{report}
+
+\usepackage[utf8x]{inputenc}			  % Utilisation du UTF8
+\usepackage{textcomp}				  % Accents dans les titres
+\usepackage [ french ] {babel}                    % Titres en français
+\usepackage [T1] {fontenc} 			  % Correspondance clavier -> document
+\usepackage[Lenny]{fncychap}                      % Beau Chapitre
+\usepackage{dsfont}                    	          % Pour afficher N,Z,D,Q,R,C
+\usepackage{fancyhdr}                             % Entete et pied de pages
+\usepackage [outerbars] {changebar}               % Positionnement barre en marge externe
+\usepackage{amsmath}				  % Utilisation de la librairie de Maths
+%\usepackage{amsfont}				  % Utilisation des polices de Maths
+\usepackage{cite}                                 % Citations de la bibliographie
+\usepackage{openbib}                              % Gestion avancée de Bibtex
+\usepackage{enumerate}				  % Permet d'utiliser la fonction énumerate
+\usepackage{dsfont}				  % Utilisation des polices Dsfont
+\usepackage{ae}					  % Rend le PDF plus lisible
+
+\newtheorem{de}{Définition}
+\newtheorem{theo}{Théorème}
+\newtheorem{prop}{Propriété}
+
+\title{Energie d'un point materiel}
+\author{MPSI}
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter{Puissance et travail d'une force}
+\section{Puissance}
+\begin{de}
+Soit M(m) un point materiel observé dans un référentiel R et animé de la vitesse $\overrightarrow{V}(M)_R$.\\
+Supposons que M soit soumis à l'action d'une force $\overrightarrow{F}$.\\
+La puissance associé à cette force à chaque instant est défini par :
+$$P = \overrightarrow{F}.\overrightarrow{V}(M)_R$$
+L'unité de P est le Watt.
+\end{de}
+\begin{prop}
+Si M(m) est soumis à un ensemble de force $\Sigma \overrightarrow{F}$, alors :
+$$P = \sum_i P_i$$
+avec :
+$$P_i = \overrightarrow{F_i}.\overrightarrow{V}(M)_R$$
+\end{prop}
+\section{Travail d'une force}
+\begin{de}
+Le travail d'une force $\overrightarrow{F}$ entre t et t+dt dans le referentiel R est donnée par :
+$$\delta\omega = P.dt$$
+On obtient aussi la formule :
+$$\delta\omega = \overrightarrow{F}.\overrightarrow{dl}$$
+\end{de}
+\chapter{Théorème de l'énérgie cinétique}
+\section{Énergie cinétique}
+\begin{de}
+Soit M(m) point materiel observé dans R, et animé de la vitesse $\overrightarrow{V}(M)_R$.\\
+L'énérgie cinétique de M(m) dans R est donnée par :
+$$E_c(M)_R = \dfrac{1}{2}.m.v^2(M)_R$$
+Son unité est le Joule
+\end{de}
+\section{Théorème de l'énergie cinétique}
+Soit M(m) un point matériel observé dans R galiléen, soumis dans R à la résultant $\Sigma \overrightarrow{F}$ des forces exterieur.\\
+\begin{theo}
+On obtient la relation :
+$$dE_c(M)_R = \sum_i \delta\omega_i$$
+\end{theo}
+Entre deux instant $t_1$ et $t_2$, le théorème de l'énergie cinétique devient :
+$$\Delta_{t_1 \rightarrow t_2} E_c(M) = \sum_i \omega_i$$
+avec :
+$$\omega_{t_1 \rightarrow t_2} = \int_{M_1}^{M_2} \overrightarrow{F}.\overrightarrow{dl}$$
+\section{Force conservative}
+\begin{de}
+Une force $\overrightarrow{F}$ est dites conservative quand son travail entre deux point $M_1$ et $M_2$ ne dépend pas du chemin suivit, mais uniquement des positions $M_1$ et $M_2$.\\
+Ceci implique que sur un contour fermé, le travail d'une force conservative est nul.\\
+Une force qui n'est pas conservative est dites non-conservative.
+\end{de}
+\subsection{Force conservative et energie potentielle}
+On obtient la formule suivante, liant énergie potentielle et force conservative : 
+$$\delta \omega = \overrightarrow{F}.\overrightarrow{dl}=-dE_p$$
+\chapter{Energie mécanique et integrale première}
+\section{Energie mécanique}
+\begin{de}
+L'énergie mécanique d'un point materiel M(m) dans un réferentiel R, notée $E_m(M)_R$, est la somme de son énergie cinétique et de son énergie potentielle totale $E_{p_{tot}}$ :
+$$E_m(M)_R = E_c(M)_R + E_{p_{tot}}$$
+\end{de}
+\section{Relation entre le théorème de l'énergie cinétique et $E_m(M)_R$}
+Soit M(m) un point materiel, soumis à des forces non-conservative, notée $F^{n-c}$.
+On obtient la relation suivant :
+$$dE_m(M)_R = \Sigma \delta \omega^{n-c}$$
+\section{Intégrale première de l'énergie cinétique}
+\begin{de}
+ L'énergie mécanique de M dans R est constante si et seulement si :
+\begin{itemize}
+ \item[$\rightarrow$] Pas de force non conservative
+ \item[$\rightarrow$] Les forces non conservative ne travail pas. $\overrightarrow{F}^{n-c} \bot \overrightarrow{dl}$
+\end{itemize}
+Cette relation constitue l'intégrale première de l'énergie cinétique
+\end{de}
+\section{Relation entre l'énergie potentielle et les relations d'équilibre}
+Considérons un système dont la position ne dépend que d'une seul variable de l'espace.\\
+Supposons que M soit soumis à le force résultant $\overrightarrow{F}$ conservative.\\
+Les positions d'équilibre du système sont les extrémums de la fonction $E_p$.\\
+Si la courbe est convexe au voisinage de l'équilibre, alors l'équilibre est stable.\\
+Si la courbe est concave au voisinage de l'équilibre, alors l'équilibre est instable. \\
+\end{document}

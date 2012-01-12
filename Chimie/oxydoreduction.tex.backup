@@ -1,0 +1,54 @@
+\chapter{Réaction d'oxydo-réduction - Nombre d'oxydation}
+\begin{de}
+ Un réaction d'oxydo-réduction est une réaction durant laquelle il y a échange d'électrons.\\
+L'équation type de réaction est :
+$$Ox + ne^- \rightarrow Red$$
+\end{de}
+\section{Nombre d'oxydation}
+Les nombres d'oxydation permettent d'équilibrer un équations. Ils sont toujours écrient à l'aide des chiffres romaine. Ils sont régit par les règles suivantes :\\
+\begin{itemize}
+ \item[$\rightarrow$] Dans une entité monoatomique, le nombre d'oxydation est la charge de l'entité.\\
+ \item[$\rightarrow$] Dans une entité polyatomique, la somme des nombre d'oxydation des différents élements est égale à la charge de l'entité.\\
+ \item[$\rightarrow$] En géneral : n.o(H) = I ; n.o(O) = -II\\
+\end{itemize}
+Les nombres d'oxydations permettent de savoir si une entité X est oxydé ou réduite, et de connaitre le nombre d'électron échangé :\\
+\begin{itemize}
+ \item[$\rightarrow$] Si $\Delta n.o(X) > 0 $ : Il y a oxydation de X\\
+ \item[$\rightarrow$] Si $\Delta n.o(X) < 0 $ : Il y a réduction de X\\
+\item[$\rightarrow$] |$\Delta n.o(X)$| = Nombres d'électrons échangés\\
+\end{itemize}
+\subsection{Plan d'équilibrage d'une réaction avec les nombres d'oxydation}
+\begin{itemize}
+ \item[$\rightarrow$] On calcule les nombres d'oxydations des differentes entités mise en jeu.\\
+ \item[$\rightarrow$] On équilibre les $\Delta$n.o sachant qu'il faut que : $$\sum_i \nu_i \Delta n.o (X_i) = 0$$
+ \item[$\rightarrow$] On vérifie la conservation des charges, si besoin on ajoute des $H^+$ en milieu acide, des $OH^-$ en milieu basique\\
+ \item[$\rightarrow$] On vérifie la conservation de la matière, si besoin on ajoute des $H_2O$. \\
+ \item[$\rightarrow$] On vérifie si la réaction est bien équilibré.\\
+\end{itemize}
+\chapter{Formule de Nernst}
+\section{Vocabulaire}
+\begin{de}
+Les notions d'anonde et de cathode sont défini par la polarité de la pile. Nous retiendrons que la réduction s'effectue à la cathode.
+\end{de}
+\subsection{Potentiel d'électrode}
+\begin{de}
+ On appele potentiel d'électrode le potentiel d'une électrode de mesure par rapport à l'électrode de réference, a savoir l'electrode standard à hydrogène (E.S.H)
+\end{de}
+\section{Formule de Nernst}
+\begin{de}
+Considerons le couple oxydant-réducteur dont la demi équation électronique est :
+$$\alpha Ox+ne^- = \beta.Red$$
+La formule de Nernst établie que le potentiel d'électrode relatif à ce couple à pour expression :
+$$E(Ox/Red) = E^0(Ox/Red) + \dfrac{R.T}{n.F}.ln\left( \dfrac{a^{\alpha}(g(Ox))}{a^{\beta}(g(Red))}\right) $$
+On obtient l'expression usuelle :
+$$E(Ox/Red) = E^0(Ox/Red) + \dfrac{0.06}{n}.log\left( \dfrac{a^{\alpha}(g(Ox))}{a^{\beta}(g(Red))}\right) $$
+avec $g(Ox)$ : Groupe oxydant ; g(Red) : Groupe réducteur
+\end{de}
+A partir de cette expression, on peut établir le diagramme de prédominance.
+\section{Réaction d'oxydo-réduction à l'équilibre chimique}
+Condérons la réaction :
+$$A.Ox_1+B.Re_2 = A.Red_1+B.Ox_2$$
+A l'équilibre, nous avons : 
+$$E(Ox_1/Red_1) = E(Ox_2/Red_2)$$
+A partir de la relation de Guldberg et Waages, on obtient l'expression de la constante de réaction :
+$$K(t) = 10^{\frac{n}{0.06}(E^0(Ox)-E^0(Red))}$$

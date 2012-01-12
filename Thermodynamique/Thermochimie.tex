@@ -1,0 +1,90 @@
+\chapter{Définitions}
+\section{Avancement}
+\begin{de}
+ Considérons la réaction suivant :
+$$\nu_1A_1 + \nu_2A_2 + .... \rightarrow \nu_1'A_1' + \nu_2'A_2' + .....$$
+L'avancement à l'instant t est :
+$$\xi(t) = \dfrac{n_i - n_i(t)}{\nu_i} = \dfrac{n_i'(t) - n_i'}{\nu_i'} $$
+\end{de}
+L'avancement ne dépend pas des entités chimique mise en jeux. C'est une grandeur caractéristique de la réaction.
+\section{Application du Ier principe}
+\subsection{Résultat calorimétrique}
+\begin{itemize}
+ \item[$\rightarrow$] Si un système subit une évolution isochore, nous savons que : $$\Delta u = Q_v$$
+ \item[$\rightarrow$] Si un système subit une évolution mono ou isobare, alors :
+$$\Delta H = Q_p$$ Ceci n'est verifié, pour une évolution monobar, si $p_i = p_f$, ce qui est généralement le cas en chimie
+\end{itemize}
+\section{Grandeur chimique de réaction}
+Soit X une grandeur caractéristique du système. $$X(T,p,...n_i...)$$ avec $n_i(t)$ nombre de moles de réactif $A_i$ ou de produit $A_i'$ à l'instant t.\
+\begin{de}
+On appelle $X_m$ de réaction l'expression $\Delta_r X$ défini par :
+$$\Delta_r X = \sum_{i=1}^N \nu_i X_{m,i}$$
+On l'appelle opérateur de Lewis.
+\end{de}
+En t et t+dt, a T et p fixé, on obtient : 
+$$dX(...n_i...) = \Delta_r X d\xi$$
+On obtient aussi la relation :
+$$\left(\dfrac{dX}{d\xi}\right)_{T,p}=\Delta_r X$$
+\section{Grandeur standard de réaction}
+\subsection{Conditions standard}
+\begin{de}
+ On considère qu'un système est dans les conditions standard si et seulement si :
+$$p = p^0 = 1 bar$$
+Avec une temperateur quelconque.
+En géneral, dans les grandeur tabulées, T = 298 K.
+\end{de}
+\subsection{Etat standard d'une entité chimique}
+\begin{de}
+ On appelle état standard d'une entité chimique son état physique de référence dans les conditions standard. Ces états sont dépendants de la température.
+\end{de}
+\subsection{Grandeur standard de réaction}
+\begin{de}
+ On appelle grandeur standard de réaction une grandeur de réaction prise dans les conditions standard. On la note :
+$$\Delta_r X^0 = \sum_{i=1}^N \nu i X_{m,i}^0$$
+\end{de}
+\subsection{Transfert thermique associé à une réaction chimique}
+Dans le cas d'une évolution isochore, mono ou isotherme, on a :
+$$Q_v = \Delta u^0 (T) = \Delta_r u^0(T) \xi(T)$$
+Dans le cas d'une évolution mono ou isobare, mono ou isotherme, on a :
+$$Q_p = \Delta H^0 (T) = \Delta_r H^0(T) \xi(T)$$
+\chapter{Enthalpie standard de formation}
+\begin{de}
+On appelle enthalpie standard de formation d'une entité chimique, notée $\Delta_f H^o$, l'enthalpie standard de réaction de la formation de l'entité, à partir des corps simple qui la compose, dans les conditions standard, à une température T donnée.\\
+Il en découle donc que l'enthalpie standard de formation d'un corps simple est nul.
+\end{de}
+\section{Loi de Hess}
+D'après la définition ci-dessus, on obtient la loi suivante, dit loi de Hess, pour la grandeur X :
+$$\Delta_r X = (\sum_i \nu_i X_{i_f} (produit_i) - \sum_i \nu_i X_{i_f} (reactif_i))$$
+\section{Influence de la température sur l'enthalpie standard de réaction}
+Considérons la réaction :
+$$\nu_1A_1 + \nu_2A_2 + .... \rightarrow \nu_1'A_1' + \nu_2'A_2' + .....$$
+On obtient :
+$$\Delta_r H^0(T_2) = \Delta_r H^0(T_1) + \int_{T_1}^{T_2} (\Delta_r C_{p,mol}^0dT)$$
+\section{Température de flamme}
+Considérons un système qui subit une évolution adiabatique, durant la quel une réaction chimique dégage une transfert thermique Q.\\
+Notons $n_i$ la quantité de matière de l'entité i, à l'équilibre.\\
+On obtient la relation suivante, qui permet de déterminer la température de flamme : 
+$$Q + \int_{T_{ini}}^{T_{fla}} \sum_i n_i.Cp_{mol,i}^0 dT = 0$$
+On obtient la température finale des entités présentes en fin de réaction, appelé temperature de flamme.
+\chapter{Énergie de liaison}
+Considérons une molécule A-B à l'etat gazeuse.
+\begin{de}
+ L'énergie de la liaison A-B est l'énergie qu'il faut fournir à cette molécule pour rompre la liaison et produire les entités A et B à l'état gazeux.
+$$A-B_{(g)} \rightarrow A_{(g)}^0 + B_{(g)}^0$$
+On la note :
+$$E_{Liaison}(A-B)=D(A-B)$$
+\end{de}
+D'un point de vu thermodynamique : 
+$$D(A-B)=\Delta_r H^0 (T)$$
+\chapter{Énergie d'ionisation et d'attachement électronique}
+\begin{de}
+ L'énergie de ionisation d'un atome X donnée est l'énergie qu'il faut fournir pour arracher un électron à l'atome $X_{(g)}$ au cours de la réaction :
+$$X_{(g)} \rightarrow X^+_{(g)}+1e^-_{(g)}$$
+L'énergie d'ionisation est l'enthalpie standard de cette réaction
+\end{de}
+Pour T $\rightarrow$ 0K, ce modèle concordre avec celui de la mécanique quantique.
+\begin{de}
+ L'énergie d'attachement électronique,notée $E_{AE}(T)$, est l'opposé de $\Delta_r H^0$ de la réaction suivante :
+$$X_{(g)} + 1e_{(g)}^- \rightarrow X_{(g)}^-$$
+$$E_{AE}(T) = -\Delta_r H^0(T)$$
+\end{de}

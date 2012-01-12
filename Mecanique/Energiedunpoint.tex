@@ -1,0 +1,69 @@
+\chapter{\'Energie d'un point materiel}
+\section{Puissance et travail d'une force}
+\subsection{Puissance}
+\begin{de}
+Soit M(m) un point materiel de masse m observé dans un référentiel R galiléen et animé de la vitesse $\overrightarrow{V}(M)_R$.\\
+Supposons que M soit soumis à l'action d'une force $\overrightarrow{F}$.\\
+La puissance, scalaire associée à cette force à chaque instant, est définie par :
+$$P = \overrightarrow{F}.\overrightarrow{V}(M)_R$$
+L'unité de la puissance est le Watt.
+\end{de}
+\begin{prop}
+Si M(m) est soumis à un ensemble de forces $\Sigma \overrightarrow{F}$, alors :
+$$P = \sum_i P_i$$
+avec :
+$$P_i = \overrightarrow{F_i}.\overrightarrow{V}(M)_R$$
+\end{prop}
+\subsection{Travail d'une force}
+\begin{de}
+Le travail d'une force $\overrightarrow{F}$ entre t et t+dt dans le référentiel R est donné par :
+$$\delta\omega = P.dt$$
+On obtient aussi la formule :
+$$\delta\omega = \overrightarrow{F}.\overrightarrow{dl}$$
+\end{de}
+\section{Théorème de l'énergie cinétique}
+\subsection{Énergie cinétique}
+\begin{de}
+Soit M(m) point materiel de masse m observé dans R galiléen, et animé de la vitesse $\overrightarrow{V}(M)_R$.\\
+L'énérgie cinétique de M(m) dans R est donnée par, avec v la norme de $\overrightarrow{V}(M)_R$:
+$$E_c(M)_R = \dfrac{1}{2}.m.v^2(M)_R$$
+L'unité de l'énergie cinétique est le Joule.
+\end{de}
+\subsection{Théorème de l'énergie cinétique}
+Soit M(m) un point matériel de masse m observé dans R galiléen, soumis dans R à la résultante $\Sigma \overrightarrow{F}$ des forces exterieures.\\
+\begin{theo}
+On obtient la relation :
+$$dE_c(M)_R = \sum_i \delta\omega_i$$
+\end{theo}
+Entre deux instants $t_1$ et $t_2$, le théorème de l'énergie cinétique devient :
+$$\Delta_{t_1 \rightarrow t_2} E_c(M) = \sum_i \omega_i$$
+avec :
+$$\omega_{t_1 \rightarrow t_2} = \int_{M_1}^{M_2} \overrightarrow{F}.\overrightarrow{dl}$$
+\section{Force conservative}
+\begin{de}
+Une force $\overrightarrow{F}$ est dite conservative quand son travail entre deux points $M_1$ et $M_2$ ne dépend pas du chemin suivit, mais uniquement des positions $M_1$ et $M_2$.\\
+Ceci implique que sur un contour fermé, le travail d'une force conservative est nul.\\
+Une force qui n'est pas conservative est dites non-conservative.
+\end{de}
+\subsection{Force conservative et énergie potentielle}
+On obtient la formule suivante, liant énergie potentielle et force conservative : 
+$$\delta \omega = \overrightarrow{F}.\overrightarrow{dl}=-dE_p$$
+\section{\'Energie mécanique et intégrale première de l'énergie cinétique}
+\subsection{Energie mécanique}
+\begin{de}
+L'énergie mécanique d'un point materiel M(m) de masse m dans un réferentiel R, notée $E_m(M)_R$, est la somme de son énergie cinétique et de son énergie potentielle totale $E_{p_{tot}}$ :
+$$E_m(M)_R = E_c(M)_R + E_{p_{tot}}$$
+\end{de}
+\subsection{Relation entre le théorème de l'énergie cinétique et $E_m(M)_R$}
+Soit M(m) un point materiel de masse m, soumis à des forces non-conservatives, notées $F^{n-c}$.
+On obtient la relation suivant :
+$$dE_m(M)_R = \Sigma \delta \omega^{n-c}$$
+\subsection{Intégrale première de l'énergie cinétique}
+L'énergie mécanique de M dans R est constante si et seulement si il n'y a pas de forces non conservatives ou les forces non conservatives ne travaillent pas, c'est à dire que : $$\overrightarrow{F}^{n-c} \bot \overrightarrow{dl}$$
+Dans ce cas, en dérivant l'expression de l'énergie mécanique, on obtient une expression égale à zéro. Ce qui permet de ne pas avoir à passer par le P.F.D. Ceci consitue l'intégrale première de l'énergie cinétique.
+\subsection{Relation entre l'énergie potentielle et les relations d'équilibre}
+Considérons un système dont la position ne dépend que d'une seule variable de l'espace.\\
+Supposons que M(m), point materiel de masse m, soit soumis à le force résultant $\overrightarrow{F}$ conservative.\\
+Les positions d'équilibre du système sont les extrémums de la fonction $E_p$.\\
+Si la courbe est convexe au voisinage de l'équilibre, alors l'équilibre est stable.\\
+Si la courbe est concave au voisinage de l'équilibre, alors l'équilibre est instable. \\

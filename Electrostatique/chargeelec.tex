@@ -1,0 +1,83 @@
+\chapter{Charge électrique}
+\begin{de}
+La matière est électriquement neutre. Cette neutralité résulte d'une fine compensation entre les charges positives et les charges négatives dans la matière.\\
+La charge électrique est une grandeur extensive, conservative (non crée et non détruite) et quantifié. (Ceci n'est plus vérifié dans le cadre d'une étude au niveau nucléaire)
+\end{de}
+\begin{de}
+Une charge est dites ponctuelle quand on peut concentrer la totalité de la charge en un point. On la note q.
+\end{de}
+\section{Distribution de charge}
+On distingue trois types de distributions de charges :
+\begin{itemize}
+ \item[$\rightarrow$] Distribution volumique
+ \item[$\rightarrow$] Distribution surfacique
+ \item[$\rightarrow$] Distribution linéique
+\end{itemize}
+\subsection{Distribution volumique}
+Soit une distribution volumique de charges, pour toute la charge $Q_T$, dans un volume v.\\
+Soit M un point appartenant au voisinage du quel on défini un volume dv(M). Ce volume dv(M) porte la charge dq(M)
+\begin{de}
+On appelle densité volumique de charge, défini au voisinage de M, la grandeur suivante :
+$$\rho(m) = \dfrac{dq(M)}{dv(M)}$$
+Son unité est le C.$m^{-3}$
+\end{de}
+\begin{prop}
+Une densite volumique est considérer uniforme quand : 
+$$\rho(M) = \rho_0 = cte$$
+\end{prop}
+\begin{prop}
+La charge totale portée par v est donnée en fonction de $\rho(M)$ par :
+$$Q_T = \iiint_V dq(M) = \iiint_V \rho(M).dv(M)$$
+Si la distribution est uniforme : 
+$$Q_T = \rho_0.v$$
+\end{prop}
+\subsection{Distribution surfacique et linéaire}
+Si respectivement l'epaisseur ou la section est négligable devant la dimension du corps considéré, on peut effectuer les approximations suivantes : 
+\begin{itemize}
+ \item[$\rightarrow$] Dans le cadre d'une distribution surfacique, dq(M) $\simeq \sigma(M).dS(M)$
+ \item[$\rightarrow$] Dans le cadre d'une distribution linéique, dq(M) $\simeq \lambda(M).dL(M)$
+\end{itemize}
+On obtient donc dans le cas d'une distribution uniforme : 
+\begin{itemize}
+ \item[$\rightarrow$] Dans le cadre d'une distribution surfacique $Q_T = \sigma_0.S$
+ \item[$\rightarrow$] Dans le cadre d'une distribution linéique, $Q_T = \lambda_0.L$
+\end{itemize}
+\section{Loi de Coulomb}
+\begin{de}
+Soient $q_1,q_2$ deux charges ponctuelle plongées dans le vide. La force d'interaction électrostatique exercée par $q_1$ sur $q_2$ est donnée par la loi de Coulomb : 
+$$\overrightarrow{F}_{1 \rightarrow 2} = \dfrac{q_1.q_2}{4\pi \varepsilon_0 r^2} \overrightarrow{u_r} = -\overrightarrow{F}_{2 \rightarrow 1}$$
+Cette force est en $\dfrac{1}{r^2}$. On dit qu'elle est newtonienne. C'est une force conservative.
+\end{de}
+\subsection{Principe de superposition}
+Considérons une charge ponctuelle M'(q') de charge q' soumise à l'action de N charges ponctuelles $q_i$.\\
+La force ressenti par M'(q') est : 
+$$\overrightarrow{F}_{res} = \sum_i^N \dfrac{q_i.q'}{4\pi\varepsilon_0r_i^2}\overrightarrow{u}_i$$
+avec : $\overrightarrow{u}_i = \dfrac{\overrightarrow{M_iM'}}{||\overrightarrow{M_iM'}||}$.\\
+Ceci constitue le principe de superposition. On postule qu'il y a linéarité entre la cause et les effets.\\
+On peut généraliser ceci pour une distribution volumique, surfacique ou linéique.
+\section{Champs électrostatique}
+L'intéret de définir un champs est qu'on se libère du sujet d'étude. Un champs est une propriété intrinsèque de l'espace.
+\subsection{Champs crée par une charge ponctuelle}
+\begin{de}
+Soient deux charges ponctuelles, M(q) de charge q, et M'(q') de charge q'. La force exercé par q sur q' est donnée par la loi de Coulomb.\\
+Le champs électrique en M' est donnée par : 
+$$\dfrac{\overrightarrow{F}_{M \rightarrow M'}}{q'} = \overrightarrow{E}(M') = \dfrac{q}{4\pi \varepsilon_0 r^2} \overrightarrow{u_r} $$
+\end{de}
+\subsection{Champs crée par une distribution de charge}
+\subsubsection{Distribution volumique de charge}
+Soit P un point quelconque d'une distribution volumique de charge, au voisinage duquel on défini un volume élementaire dv(p), contenant la charge dq(p) = $\rho(P).dv(P)$.\\
+Soit M un point quelconque de l'espace.\\
+En partant de l'expression du champs crée par un charge ponctuelle (Méthode de calcul directe), on obtient : 
+$$\overrightarrow{E}(M) = \dfrac{1}{4\pi\varepsilon_0} \iiint_V \dfrac{\rho(P).\overrightarrow{PM}.dv(P)}{(PM)^3}$$
+\subsubsection{Distribution surfacique de charge}
+On obtient par un raisonnement analogue :
+$$\overrightarrow{E}(M) = \dfrac{1}{4\pi\varepsilon_0} \iint_S \dfrac{\sigma(P).dS(P)}{(PM)^3}$$
+\subsubsection{Distribution linéique de charge}
+De même :
+$$\overrightarrow{E}(M) = \dfrac{1}{4\pi\varepsilon_0} \int_L \dfrac{\lambda(P).dL(P)}{(PM)^3}$$
+\subsection{Champs crée par un disque uniformement chargé en surface avec la densité $\sigma_0$}
+Par application des formules précedentes, et en s'appuyant sur les symétries du problèmes, on obtient, avec $\alpha$ l'angle entre l'axe de symétrie et le sommet du disque, et $\overrightarrow{u}$ vecteur directeur de l'axe de symétrie : 
+$$\overrightarrow{E}(M) = \dfrac{\sigma_0}{2.\varepsilon_0}(1 - cos(\alpha))\overrightarrow{u}$$
+\subsection{Champs crée par un fil de longeur infini uniformement chargé avec la densité $\lambda_0$}
+Par application, on obtient : 
+$$\overrightarrow{E}(M) = \dfrac{\lambda_0}{2\pi\varepsilon_0.OM} \overrightarrow{u}$$

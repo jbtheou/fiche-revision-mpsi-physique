@@ -1,0 +1,48 @@
+\chapter{Outils Math\'ematique}
+\section{Produit scalaire}
+Soit $\overrightarrow{X}(x_1,y_1,z_1),\overrightarrow{Y}(x_2,y_2,z_2)$.\\
+Le produit scalaire est défini par :
+$$\overrightarrow{X}.\overrightarrow{Y}=x_1x_2+y_1y_2+z_1z_2$$
+$$\overrightarrow{X}.\overrightarrow{Y}=||\overrightarrow{X}||.||\overrightarrow{Y}||.cos(\theta)$$
+\section{Produit vectorielle}
+$$\overrightarrow{X}\wedge\overrightarrow{Y} = \begin{pmatrix}
+  x_1 \\
+  y_1 \\
+  z_1 \\
+\end{pmatrix}\wedge\begin{pmatrix}
+  x_2 \\
+  y_2 \\
+  z_2 \\
+\end{pmatrix} = \begin{pmatrix}
+  y_1z_2 - z_1y_2 \\
+  z_1x_2 - x_1z_2 \\
+  x_1y_2 - y_1x_2 \\
+\end{pmatrix}$$
+$$\overrightarrow{X}\wedge\overrightarrow{Y}=\overrightarrow{W}$$
+avec $\overrightarrow{W}$ orthogonale à $\overrightarrow{X}$ et $\overrightarrow{Y}$
+\section{Dérivation d'un vecteur}
+$$\dfrac{d\overrightarrow{X}}{dt} = \overrightarrow{W}\wedge\overrightarrow{X}$$
+avec $\overrightarrow{W}$ le vecteur rotation instantanée.\\
+Appliqué à $\overrightarrow{u_{\theta}}$ et $\overrightarrow{u_{r}}$, on obtient :
+$$\dfrac{d\overrightarrow{u_{\theta}}}{dt} = -\mathring{\theta}\overrightarrow{u_{r}}$$
+$$\dfrac{d\overrightarrow{u_{r}}}{dt} = \mathring{\theta}\overrightarrow{u_{\theta}}$$
+\section{Coordonnée}
+
+\subsection{Coordonnée polaire}
+$$\overrightarrow{dl} = dr.\overrightarrow{u_r}+rd\theta.\overrightarrow{u_{\theta}}$$
+\subsection{Coordonnée cylindrique}
+$$\overrightarrow{dl} = dr.\overrightarrow{u_r}+rd\theta.\overrightarrow{u_{\theta}}+dz.\overrightarrow{k}$$
+\subsection{Coordonnée sphérique}
+$$\overrightarrow{dl} = dr.\overrightarrow{u_r}+rd\theta.\overrightarrow{u_{\theta}}+rsin(\theta)d\varphi.\overrightarrow{u_{\varphi}}$$
+\section{Equations différentielles}
+\begin{itemize}
+ \item[$\rightarrow$] $x'+\alpha x=0$ $$x(t) = Ae^{-\alpha t}$$
+ \item[$\rightarrow$] $x'' + \omega_0^2x = 0$ $$x(t) = C.cos(\omega_0t+\phi)$$
+ \item[$\rightarrow$] $x'' - \omega_0^2x = 0$ $$x(t) =  Ach(\omega_0t)+Bsh(\omega_0t)$$
+ \item[$\rightarrow$] $x'' + 2\alpha x'+\omega_0^2x = 0$ 
+\begin{itemize}
+ \item[$\rightarrow$] Si $\Delta$ > 0 : $$x(t) = Ae^{r_1t} + Be^{r_2t}$$
+ \item[$\rightarrow$] Si $\Delta$ < 0 : $$x(t) = Ce^{-\alpha t}cos(\omega t+\phi)$$ 
+ \item[$\rightarrow$] Si $\Delta$ = 0 : $$x(t) = Ae^{- \alpha t}(A+Bt)$$
+\end{itemize}
+\end{itemize}

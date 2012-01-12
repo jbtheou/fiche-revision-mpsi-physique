@@ -1,0 +1,55 @@
+\chapter{Changement de référentiel}
+\section{Définitions}
+\subsection{Présentation}
+\begin{de}
+Soient deux référentiels R et $R_1$ en mouvement relatifs.
+On pose que $R_1$ est un référentiel dit fixe, alors que R est un référentiel dit mobile.
+\end{de}
+\subsection{Dérivation d'un vecteur quelconque par rapport au temps}
+Soit $\overrightarrow{u} = x(t)\overrightarrow{i}+y(t)\overrightarrow{j}+z(t)\overrightarrow{k}$ un vecteur défini dans R. On obtient :
+$$\left( \dfrac{d\overrightarrow{u}}{dt}\right)_{R_1} = \left( \dfrac{d\overrightarrow{u}}{dt}\right)_R + \omega_{\frac{R}{R_1}}\wedge\overrightarrow{u}  $$
+Avec $\omega_{\frac{R}{R_1}}$ : le vecteur rotation instantanée de R par rapport à $R_1$ \\
+Si $\overrightarrow{u}$ est fixe dans R, c'est à dire que x(t),y(t),z(t) sont des constantes, on obtient que :
+$$\left( \dfrac{d\overrightarrow{u}}{dt}\right)_{R_1} = \omega_{\frac{R}{R_1}}\wedge\overrightarrow{u} $$
+\subsection{Réferentiel en translation}
+\begin{de}
+On dit que deux réferentiels R et $R_1$ sont en translation si $\omega_{\frac{R}{R_1}} = \overrightarrow{0}$
+\end{de}
+\section{Loi de compositions des vitesses, des accélérations}
+\subsection{Loi de compositions des vitesses}
+On obtient la relation :
+$$\overrightarrow{v}(M)_{R_1} = \overrightarrow{v}(M)_R + \overrightarrow{v}(O)_{R_1} + \omega_{\frac{R}{R_1}} \wedge \overrightarrow{OM}$$
+On exprime cette relation sous la forme :
+$$\overrightarrow{v}_A = \overrightarrow{v}_R + \overrightarrow{v}_E$$
+Avec : 
+$$\left\{\begin{array}{l}
+   \overrightarrow{v}_A  : \mbox{ Vitesse absolu (repère fixe)}\\
+   \overrightarrow{v}_R  : \mbox{ Vitesse relative (repère mobile)}\\
+   \overrightarrow{v}_E  : \mbox{ Vitesse d'entrainement}\\
+
+  \end{array}\right.$$
+\subsection{Loi de composition des accélérations}
+On obtient la relation :
+$$\overrightarrow{a}(M)_{R_1}= \overrightarrow{a}(M)_R + 2\omega_{\frac{R}{R_1}}\wedge\overrightarrow{v}(M)_R + \overrightarrow{a}(O)_{R_1}+\omega_{\frac{R}{R_1}}\wedge(\omega_{\frac{R}{R_1}}\wedge\overrightarrow{OM})+ \left(\dfrac{d\omega_{\frac{R}{R_1}}}{dt}\right)_{R_1}\wedge\overrightarrow{OM}$$
+On exprime cette relation sous la forme :
+$$\overrightarrow{a}_A = \overrightarrow{a}_R + \overrightarrow{a}_E + \overrightarrow{a}_C$$
+Avec : 
+$$\left\{\begin{array}{l}
+   \overrightarrow{a}_C  = 2\omega_{\frac{R}{R_1}}\wedge\overrightarrow{v}(M)_R : \mbox{ Accélération de Coriolis}\\
+   \overrightarrow{a}_E  : \mbox{ Vitesse d'entrainement, obtenu pour la vitesse de M dans R nul}\\
+
+  \end{array}\right.$$
+\section{Repère en translation et en rotation}
+\subsection{Translation}
+Soit R un repère en translation par rapport à $R_1$, donc $\omega_{\frac{R}{R_1}} = \overrightarrow{0}$.\\
+On obtient : 
+$$\overrightarrow{v}_A = \overrightarrow{v}_R + \overrightarrow{v}(O)_{R_1}$$
+$$\overrightarrow{a}_A = \overrightarrow{a}_R + \overrightarrow{a}(O)_{R_1}$$
+\subsection{Rotation uniforme autour d'un axe fixe}
+\begin{de}
+On dit que R est en rotation uniforme autour d'un axe fixe de $R_1$ quand deux des axes de R et de $R_1$ sont confondu, avec O qui est confondu avec $O_1$
+\end{de}
+On obtient, avec $\overrightarrow{HM}$ la distance entre l'axe de rotation et le point M : 
+$$\overrightarrow{v}_A = \overrightarrow{v}_R + \omega_{\frac{R}{R_1}}\wedge\overrightarrow{HM}$$
+$$\overrightarrow{a}_A = \overrightarrow{a}_R + 2\omega_{\frac{R}{R_1}}\wedge\overrightarrow{v}(M)_R - \omega^2\overrightarrow{HM}$$
+On observe donc que l'accélération de coriolis ne varie par d'un repère à l'autre

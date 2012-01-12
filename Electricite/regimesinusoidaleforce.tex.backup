@@ -1,0 +1,132 @@
+
+\chapter{Réponse d'un circuit R.L.C série à une excitation sinusoïdale}
+Considérons une association R.L.C., contenant un GBF.\\
+Le GBF fourni une tension sinusoïdale e(t) :
+$$e(t) = Ecos(\omega t +\varphi)$$
+avec $\omega = 2\pi.f$.\\
+À l'aide de la loi des mailles, on obtient :
+$$\dfrac{d^2u_c(t)}{d^2t} + \dfrac{w_0}{Q}\dfrac{du_c(t)}{dt} + \omega_0^2u_c(t) = \omega_0^2e(t)$$
+\section{Réponse de $u_c(t)$}
+La solution de cette équation est de la forme :
+$$u_c(t) = u_{c1}(t) + u_{c2}(t)$$
+Avec : 
+\begin{itemize}
+ \item[$\rightarrow$] $u_{c1}(t)$ : Solution de l'équation homogène, caratéristique d'un régime transitoire.
+ \item[$\rightarrow$] $u_{c2}(t)$ : Solution particulière de l'équation avec second membre, caratéristique d'un régime permanent :
+$$u_{c2}(t) = u_ccos(\omega t+\psi)$$
+\end{itemize}
+\section{Impedance complexe}
+\subsection{Impedance complexe d'un dipole}
+Considérons un dipole en régime sinusoïdale forcé.\\
+On obtient :
+$$\underline{i}(t) = \underline{I_M}e^{j\omega t}$$
+avec $\underline{I_M} = I_Me^{j\varphi}$
+$$\underline{u}(t) = \underline{U_M}e^{j\omega t}$$
+avec $\underline{U_M} = U_Me^{j\psi}$\\
+\begin{de}
+On appele impédance complexe le scalaire défini par :
+$$\underline{u}(t) = \underline{Z}.\underline{i}(t)$$
+D'où :
+$$\underline{Z} = \dfrac{\underline{U_M}}{\underline{I_M}}$$
+Soit $\alpha$ l'argument de $\underline{Z}$ :
+$$\alpha = \psi - \varphi$$
+On observe que : 
+\begin{itemize}
+ \item[$\rightarrow$] $\alpha = 0$ : u(t) et i(t) sont en phase
+ \item[$\rightarrow$] $0 < \alpha < \pi$ : u(t) est en avance par rapport à i(t) dans le dipole
+ \item[$\rightarrow$] $-\pi < \alpha < 0$ : u(t) est en retard par rapport à i(t) dans le dipole
+\end{itemize}
+\end{de}
+\subsubsection{Impédance d'un conducteur ohmique}
+Pour un conducteur ohmique, on obtient :
+$$\underline{Z_R} = R$$
+On observe donc que $\alpha = 0$, il n'y a donc pas de déphasage entre u(t) et i(t) dans une résistance.
+\subsubsection{Impedance d'un solénoïde}
+Pour un solénoïde, on obtient :
+$$\underline{Z_L} = j\omega L$$
+On observe donc que $\alpha = \dfrac{\pi}{2}$ : u(t) est en quadrature avance par rapport à i(t)
+\subsubsection{Impedance d'un condensateur}
+Pour un condensateur, on obtient :
+$$\underline{Z_C} = \dfrac{1}{j\omega C}$$
+On observe donc que $\alpha = \dfrac{-\pi}{2}$ : u(t) est en quadrature retard par rapport à i(t)
+\subsubsection{Loi d'additivité}
+\begin{itemize}
+ \item[$\rightarrow$] En série : $$\underline{Z_{eq}} = \sum_{k=1}^n \underline{Z_k}$$
+ \item[$\rightarrow$] En dérivation : $$\underline{\dfrac{1}{Z_{eq}}} = \sum_{k=1}^n \dfrac{1}{\underline{Z_k}}$$
+\end{itemize}
+\section{Diagramme de Fresnel}
+Considérons une association R.L.C. en série.\\
+Par application de la loi des mailles :
+$$\underline{E_M} = \underline{U_R} + \underline{U_C} +\underline{U_L}$$
+On construit à partir de ce moment le diagramme de Fresnel :
+\begin{enumerate}[1 -]
+ \item On défini une orientation pour les angles, puis on fixe un axe de référence, en général $\underline{U_R} = R.\underline{I_M}$.\\
+ \item Puis on ajoute $\underline{U_C}$ et $\underline{U_L}$ en respectant la convention d'orientation des angles.
+\end{enumerate}
+Grâce à ce diagramme, on détermine rapidement le déphase $\alpha$ entre $\underline{I_M}$ et $\underline{E_M}$ à l'aide de tan($\alpha$) :
+$$tan(\alpha) = \dfrac{\underline{Z_L}-\underline{Z_C}}{\underline{Z_R}}$$
+Dans le cas d'un circuit en dérivation, on peut définir ce diagramme à l'aide des courants et de la loi des noeuds.
+\section{Théorèmes généraux en régime sinusoidale forcé}
+\subsection{Lois de Kirchhoff}
+\subsubsection{Loi des noeuds}
+$$\sum_{Entrant}\underline{I_M} = \sum_{Sortant}\underline{I_M}$$
+\subsubsection{Loi des mailles}
+$$\sum_{k=1}^n\underline{U_{M_k}} = 0$$
+\subsection{Diviseur de tension}
+Considérons l'association de n conducteurs ohmiques en série entre deux points A et B.\\
+Soit $U_j$ la tension parcourant le $j^{eme}$ conduteur ohmique, de résitance $R_j$ :
+$$\underline{U_{M_j}} = \left( \dfrac{\underline{Z_j}}{\sum_{k=1}^n \underline{Z_k}}\right)\underline{U_{M}} $$
+\subsection{Diviseur de courant}
+Considérons deux résitances en dérivation.\\
+Soit i le courant entrant, $i_1$ le courant traversant la résitance $R_1$.\\
+On obtient :
+$$\underline{I_{M_1}} = \left( \dfrac{\underline{Z_2}}{\underline{Z_1}+\underline{Z_2}}\right)\underline{I}$$
+\subsection{Théorème de Kennely}
+Considérons un montage en étoile contenant les dipoles d'impédances complexes $\underline{Z_1},\underline{Z_2},\underline{Z_3}$.\\
+On obtient le montage équivalent, avec un seul noeud, contenant les dipoles d'impédances complexes $\underline{Z'_1},\underline{Z'_2},\underline{Z'_3}$, à l'aide des relations :
+$$\underline{Z'_1} = \dfrac{\underline{Z_2}\underline{Z_3}}{\sum_i \underline{Z_i}}$$
+avec $\underline{Z'_1}$ du coté de A, on a donc au numérateur $\underline{Z_2}\underline{Z_3}$, qui sont eux aussi du coté de A.
+\subsection{Théorème de Millman}
+Considérons un circuit composé de plusieurs dipôles : Sources de courants, sources de tensions, résistances.
+Soit A et B deux points du circuits.\\
+Le théorème de Millman permet de déterminer la tension $U_{AB}$ de la façon suivante :
+$$\underline{E_M}_{AB} = \dfrac{\sum_{j=1}^m \dfrac{\underline{E_M}_{jB}}{\underline{Z_j}} + \sum_{k=1}^M \underline{I_M}_k}{\sum_{j=1}^n \dfrac{1}{\underline{Z_j}}}$$
+\chapter{Puissance instantanée et puissance moyenne}
+\section{Puissance instantanée}
+Considérons un dipole quelconque en convention récepteur.
+\begin{de}
+On appele puissance instantanée, notée p(t), dans le dipole AB, en convention récepteur, le produit :
+$$p(t)=u(t).i(t)$$
+Son unité est le Watt
+On obtient : 
+$$p(t) = U_M.cos(\omega t+\varphi).I_M.cos(\omega t)$$
+p(t) ne s'exprime jamais avec des grandeurs complexes.
+\end{de}
+\section{Puissance moyenne}
+\begin{de}
+La puissance moyenne, notée P(t), d'un signal periodique de periode T est défini par :
+$$P(t) = \dfrac{1}{T}\int_t^{t+T}p(t)dt$$
+On obtient que la puissance moyenne consommée par un dipole en régime sinusoidale forcé est :
+$$P(t) = \dfrac{U_M.I_M}{2}cos(\varphi)$$
+avec $\varphi$ le déphasage entre u(t) et i(t) dans le dipole 
+\end{de}
+\section{Grandeur efficace}
+\begin{de}
+Soit f(t) une fonction periodique, de periode T.\\
+La valeur efficace de f(t), notée $F_e$, est défini par :
+$$F_e = \sqrt{<f(t)^2>}$$
+avec $<f(t)^2>$ la valeur moyenne de $f(t)^2$
+\end{de}
+En régime sinusoïdale forcé, on obtient :
+$$U_e = \dfrac{U_M}{\sqrt{2}}$$
+$$I_e = \dfrac{I_M}{\sqrt{2}}$$
+\section{Facteur de puissance}
+\begin{de}
+Avec les valeurs efficaces en régime sinusoïdale forcé, on obtient :
+$$P(t) = U_e.I_e.cos(\varphi)$$
+On appele $cos(\varphi)$ facteur de puissance du dipole
+\end{de}
+\section{Puissance consommée, Puissance dissipé}
+En régime sinusoïdale forcé, la puissance moyenne consommée par une résistance est :
+$$P_R(t) = \dfrac{R.I_M^2}{2}$$
+La puissance moyenne consommée par un solénoïde ou par un condensateur est nul car $\varphi = \pm \dfrac{\pi}{2}$ 

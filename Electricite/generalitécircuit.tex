@@ -1,0 +1,116 @@
+\chapter{Le courant électrique}
+Dans un conducteur électrique, on peut considérer que la vitesse des porteurs de charge est constante, sous l'action d'une force électromotrice constante, et défini par :
+$$\overrightarrow{v} = \mu.\overrightarrow{E}$$
+avec : $$\mu = \dfrac{q}{\alpha}$$
+avec q la charge, et $\alpha$ le coefficiants de frottement fluide.\\
+Soit $\overrightarrow{j}$ le vecteur défini par :
+$$\overrightarrow{j} = \gamma.\overrightarrow{E}$$
+avec $\gamma$ la conductivité du conducteur défini par :
+$$\gamma = \dfrac{nq^2}{\alpha}$$
+Le sens du courant est celui de $\overrightarrow{j}$, et donc celui de $\overrightarrow{E}$. Cependant, à l'échelle macroscopique, nous n'avons pas acces au sens de $\overrightarrow{j}$. Le sens de I, intensité du courant électrique, défini par :
+$$I = \int\int_S \overrightarrow{j}\overrightarrow{dS}$$
+est donc défini de façon arbitraire
+\section{Approximation des régimes quasi-stationnaire}
+L'approximation des régimes quasi-stationnaire, notée A.R.Q.S., consite à considerer qu'en régime variable, l'intensité du courant électrique ( i(t) ) dans un circuit filiforme est le même en tout point du circuit.\\
+Ceci revient à considérer qu'il n'y pas d'accumulation de charge dans le circuit.\\
+Tout ce qui suit est supposé vérifiant cette approximation.
+\chapter{Dipoles électriques dans l'A.R.Q.S}
+\section{Convention d'orientation}
+\begin{conv}
+Le Courant : L'orientation du courant est défini de manière arbitraire, comme nous n'avons pas acces à $\overrightarrow{j}$. Le courant ici défini est algébrique.
+\end{conv}
+\begin{conv}
+La tension : Un tension entre deux point A et B, notée $U_{AB}$ est la difference de potentielle électrique entre ces deux point :
+$$U_{AB} = V_A-V_B$$
+La tension $U_{AB}$ est représenté par une fleche partant de la deuxième lettre (B) et orienté vers la première (A).\\
+Par définition :
+$$U_{BA} = - U_{AB}$$
+\end{conv}
+\begin{conv}
+Convention récepteur : La tension et l'intensité sont représenté opposé
+\end{conv}
+\begin{conv}
+Convention générateur : La tension et l'intensité sont représenté dans le meme sens
+\end{conv}
+\section{Loi de Kirchhoff}
+Les lois de Kirchhoff sont la loi des noeuds et la loi des mailles
+\subsection{Loi des noeuds}
+Un noeud est un point de connection d'au moins trois fils dans un circuit.
+\begin{loi}
+Loi des noeuds : La somme des courants entrants est égale à la somme des courants sortant (Ils peuvent être algébrique) :
+$$\sum_{entrant}i(t) = \sum_{sortant}i(t)$$
+\end{loi}
+\subsection{Loi des mailles}
+Dans un circuit, une branche est toute portions comprise entre deux noeuds. Toutes association de branche constituant un contour fermé est une maille.
+\begin{loi}
+Dans une maille orienté, la somme algébrique des tensions est nul
+\end{loi}
+Si, au sein de la maille orienté, les tensions sont dans le sens de la maille, elle sont compté positivement. Sinon, elle le sont négativement.
+\section{Caratéristique d'un dipole}
+\begin{de}
+On appele caractéristique d'un dipole la courbe U=f(i) (ou i=f(U)) d'un dipole
+\end{de}
+\begin{prop}
+Si la caractéristique passe par l'origine O, alors le dipole est passif. Sinon, il est dit actif.
+\end{prop}
+Ex : Passif : conducteur ohmique ; Actif : générateur.\\
+Pour tracer la caractéristique, on se place en convention récepteur.
+\section{Montage en série, Montage en dérivation}
+\begin{de}
+Une association de dipole entre deux point A et B sont en série s'il n'y a pas de noeud entre A et B.\\
+Dans ce cas, le courant i(t) est identique en tout point et :
+$$U_{AB} = U_1 + U_2 + ...$$
+\end{de}
+\begin{de}
+Une portion de circuit située entre A et B est considérer en dérivation si plusieur branche sont placé entre ces points.\\
+Dans ce cas, $U_{AB}= U_1 = U_2 = ...$ et $i_{total} = i_1 + i_2 + ...$
+\end{de}
+\chapter{Présentation des principaux dipoles}
+\section{Conducteur ohmique}
+Un conducteur ohmique idéal est caractérisé par sa résitance R.\\
+Nous avons les propriétés suivantes :\\
+\begin{itemize}
+ \item[$\rightarrow$] U(t) = R.i(t) \\
+ \item[$\rightarrow$] $G = \dfrac{1}{R}$ : Sa conductance, d'unité le Siemens.\\
+ \item[$\rightarrow$] Dans un montage en serie : $$R_{eq} = \sum_{j=1}^n R_j$$
+ \item[$\rightarrow$] Dans un montage en dérivation : $$\dfrac{1}{R_{eq}} = \sum_{j=1}^n \dfrac{1}{R_j}$$
+\end{itemize}
+\section{Condensateur}
+Un condensateur idéal est caractérisé par sa capacité C.\\
+Nous avons les propriétés suivantes :\\
+\begin{itemize}
+ \item[$\rightarrow$] $U(t) = \dfrac{q_A}{C}$ \\
+ \item[$\rightarrow$] Les armatures sont en influence totale, ce qui implique : $$q_A = -q_B$$
+ \item[$\rightarrow$] L'énergie emmaganisé par le condensateur est : $$E_{em,C}(t) = \dfrac{1}{2}.C.U(t)^2$$
+,\item[$\rightarrow$] La puissance instantanée est : $$P(t) = \dfrac{d}{dt}(E_{em,c(t)})$$
+ \item[$\rightarrow$] Dans un montage en serie : $$\dfrac{1}{C_{eq}} = \sum_{j=1}^n \dfrac{1}{C_j}$$
+ \item[$\rightarrow$] Dans un montage en dérivation : $$C_{eq} = \sum_{j=1}^n C_j$$
+ \item[$\rightarrow$] Continuité de u(t) à ses bornes.
+\end{itemize}
+\section{Solénoïde}
+Un solénoïde idéal est caractérisé par son inductence L.\\
+Nous avons les proriétés suivantes :\\
+\begin{itemize}
+ \item[$\rightarrow$] U(t) = $L.\dfrac{di(t)}{dt}$ \\
+ \item[$\rightarrow$] La puissance instantanée est : $$P(t) = \dfrac{d}{dt}(E_{em,L(t)})$$
+ \item[$\rightarrow$] L'énergie emmaganisé par le solénoïde est : $$E_{em,L(t)} = \dfrac{1}{2}.L.i(t)^2$$
+ \item[$\rightarrow$] Dans un montage en serie : $$L_{eq} = \sum_{j=1}^n L_j$$
+ \item[$\rightarrow$] Dans un montage en dérivation : $$\dfrac{1}{L_{eq}} = \sum_{j=1}^n \dfrac{1}{L_j}$$
+ \item[$\rightarrow$] Continuité de i(t) à ses bornes.
+\end{itemize}
+\section{Diodes}
+Une diode est réel est caractérisé par sa tension de seuil $U_s$ et sa tension d'avalanche $U_a$.\\
+Une diode idéal est équivalente à un interrupteur.\\ Pour u(t) > 0, la diode est passante, équivalente à un interrupteur fermé.\\ Pour u(t) < 0, la diode est non passante, équivalente à un interrupteur ouvert.
+\section{Source de tension et de courant}
+\subsection{Source idéale de tension}
+Une source idéale de tension impose une force électromotrice constante à ses bornes, et quelque soit le courant qui la traverse.
+\subsection{Source idéale de courant}
+Une source idéale de courant impose un courant constant dans sa branche, et quelque soit la différence de potentiel à ses bornes.
+\subsection{Source linéaire de tension ou de courant}
+Une source linéaire de tension est une source donc la caractéristique est linéarisé, et pour la quel :
+$$U(t) = E_0 - ri$$
+\subsection{Association de source idéale}
+En série, pour les sources de tension :
+$$e_T = \sum_{k=1}^n \pm(e_k)$$
+En dérivation, pour les sources de courant :
+$$i_T = \sum_{k=1}^n \pm(i_k)$$

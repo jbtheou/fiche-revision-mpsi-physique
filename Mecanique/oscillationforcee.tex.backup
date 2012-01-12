@@ -1,0 +1,139 @@
+\documentclass[a4paper,12pt,oneside]{report}
+
+\usepackage[utf8x]{inputenc}			  % Utilisation du UTF8
+\usepackage{textcomp}				  % Accents dans les titres
+\usepackage [ french ] {babel}                    % Titres en français
+\usepackage [T1] {fontenc} 			  % Correspondance clavier -> document
+\usepackage[Lenny]{fncychap}                      % Beau Chapitre
+\usepackage{dsfont}                    	          % Pour afficher N,Z,D,Q,R,C
+\usepackage{fancyhdr}                             % Entete et pied de pages
+\usepackage [outerbars] {changebar}               % Positionnement barre en marge externe
+\usepackage{amsmath}				  % Utilisation de la librairie de Maths
+%\usepackage{amsfont}				  % Utilisation des polices de Maths
+\usepackage{cite}                                 % Citations de la bibliographie
+\usepackage{openbib}                              % Gestion avancée de Bibtex
+\usepackage{enumerate}				  % Permet d'utiliser la fonction énumerate
+\usepackage{dsfont}				  % Utilisation des polices Dsfont
+\usepackage{ae}					  % Rend le PDF plus lisible
+
+\newtheorem{de}{Définition}
+\newtheorem{theo}{Théorème}
+\newtheorem{prop}{Propriété}
+
+\title{Oscillations forcées - Résonnance d'élongation et de vitesse}
+\author{MPSI}
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter{Pendule horizontale soumis à une excitation sinusoïdale}
+Considérons un mobile M(m) de masse m, observé dans le référentiel terrestre R galiléen. M est soumis à :
+\begin{itemize}
+ \item[$\rightarrow$] Son poid $\overrightarrow{p}$
+ \item[$\rightarrow$] La réaction normale au support $\overrightarrow{n}$
+ \item[$\rightarrow$] Une force de frottement fluide : $\overrightarrow{f}=-\alpha\overrightarrow{v}(M)_R$
+ \item[$\rightarrow$] L'action du ressort : $\overrightarrow{T} = -k\Delta l$
+\end{itemize}
+L'excitateur est fixé au ressort. Le point de fixation peut se déplacer par rapport à sa position centrale $O_1$.\\
+Soit $OE_1(t) = x_e(t)\overrightarrow{i}$ l'écartement du point de fixation par rapport à sa position centrale.\\
+L'excitateur impose une excitation de type sinusoïdale :
+$$x_e(t) = X_E.cos(\omega t)$$
+En l'absence d'excitation, quand M est au repos, la position de M est repèré par le point O.\\
+On appelera $x(t)$ l'ecartement de M par rapport à O : 
+$$\overrightarrow{OM(t)} = x(t).\overrightarrow{i}$$
+\section{Équation différentielle du mouvement}
+En appliquant le P.F.D à M(m) dans R galiléen, on obtient : 
+$$\mathring{x}\mathring{} + \dfrac{\alpha}{m}\mathring{x} +x(t)\dfrac{k}{m} =x_e(t)\dfrac{k}{m}$$
+En posant : 
+\begin{itemize}
+ \item[$\rightarrow$] $\omega_0 = \sqrt{\dfrac{k}{m}}$\\
+ \item[$\rightarrow$] $\dfrac{\alpha}{m} = \dfrac{\omega_0}{Q}$
+\end{itemize}
+On obtient :
+$$\mathring{x}\mathring{} + \dfrac{\omega_0}{Q}\mathring{x} +\omega_0^2x(t) =\omega_0^2X_Ecos(\omega t)$$
+\section{Régime forcé ou régime permanent}
+\begin{de}
+On considère que le système fonctionne en régime permanent quand $x(t)$ est à peu près égale à la solution particulière de l'équation différentielle, à savoir quand :
+$$x(t) \simeq Xcos(\omega t+\varphi)$$
+On appele X l'amplitude de l'élongation de l'oscillateur et $\varphi$ le déphasage entre l'oscilatteur et l'excitateur.
+\end{de}
+\chapter{Résonance en élongation}
+\section{Notation complexe}
+Pour étudier le système, nous allons définir les notations complexes :
+$$x_e(t) = X_E cos(\omega t) \leftrightarrow \underline{x_e}(t) = X_E e^{i\omega t}$$
+$$x(t) = X cos(\omega t + \varphi) \leftrightarrow \underline{x}(t) = \underline{X}e^{i\omega t}$$
+avec $\underline{X} = Xe^{i\varphi}$ l'amplitude complexe de l'oscillateur
+\section{Amplitude complexe de l'oscillateur}
+En injectant dans l'équation différentielle, sachant que si par exemple, A est un complexe, on obtient :
+$$\dfrac{d}{dt}(A) = i\omega A$$
+On obtient donc :
+$$\underline{X}(u) = \dfrac{X_E}{1-u^2+i\dfrac{u}{Q}}$$
+avec u, pulsation réduite :
+$$u = \dfrac{\omega}{\omega_0}$$
+On peut donc déterminer le module de l'amplitude de l'oscillateur et la phase $\varphi$ :
+$$X(u) = \dfrac{X_E}{\sqrt{(1-u^2)^2 + \dfrac{u^2}{Q^2}}}$$
+$$tan(\varphi) = \dfrac{u}{Q(1-u^2)}$$
+\section{Résonance d'élongation}
+Par analogie avec l'électricité, il y a résonance d'élongation si et seulement si :
+$$Q > \dfrac{1}{\sqrt{2}} \simeq 0,7$$
+À la résonance d'élongation, on obtient les relations suivantes :
+$$u_{r} = \sqrt{1 - \dfrac{1}{2Q^2}} \simeq 1 \mbox{ Pour Q grand}$$
+$$X_{max} = X(u_r) = \dfrac{QX_E}{\sqrt{1 - \dfrac{1}{4Q^2}}} \simeq QX_E \mbox{ Pour Q grand}$$
+Pour Q grand, l'oscillateur est en quadrature retard par rapport à l'excitateur, d'apres le profil de tan($\varphi$) 
+\chapter{Vitesse}
+\section{Amplitude complexe de la vitesse}
+\begin{de}
+L'amplitude complexe de la vitesse est : 
+$$\underline{v}(t) = i\omega \underline{x}(t)$$
+En posant : 
+\begin{itemize}
+ \item[$\rightarrow$] $ \underline{v}(t) = \underline{V(\omega)}e^{i\omega t}$
+ \item[$\rightarrow$] $ \underline{x}(t) = \underline{X(\omega)}e^{i\omega t}$
+\end{itemize}
+On obtient : 
+$$\underline{V(\omega)} = i\omega\underline{X(\omega)}$$
+En posant : 
+$$\underline{V(\omega)} = V(\omega)e^{i\psi(\omega)}$$
+avec :
+\begin{itemize}
+ \item[$\rightarrow$] $V(\omega)$ : module de la vitesse complexe
+ \item[$\rightarrow$] $\psi(\omega)$ : déphasage de la vitesse par rapport à l'exciateur
+\end{itemize}
+\end{de}
+Conscient que : \\
+\begin{itemize}
+ \item[$\rightarrow$]  $\underline{X(\omega)} = X(\omega)e^{i\varphi(\omega)}$\\
+ \item[$\rightarrow$] $i = e^{i\dfrac{\pi}{2}}$\\
+\end{itemize}
+On obtient : 
+\[\left\{\begin{array}{l}
+   V(\omega) = \omega.X(\omega) = \dfrac{\omega_0.u.X_e}{\sqrt{(1-u^2)^2 + \dfrac{u^2}{Q^2}}}\\
+   \psi(\omega) = \varphi(\omega) + \dfrac{\pi}{2}\\
+  \end{array}\right.\]
+On montre que $\forall Q$, pour $u_r = 1$, il y a résonance de vitesse.\\
+À la résonance de vitesse : 
+\begin{itemize}
+\item[$\rightarrow$] $V_{max} = V(\omega_0) = Q\omega_0X_e$
+\item[$\rightarrow$] $\psi(\omega_0) = 0$ : La vitesse est en phase avec l'excitateur.
+\end{itemize}
+\chapter{Impedence complexe}
+\begin{de}
+Considérons un oscillateur mécanique soumis à l'action d'une force excitatrice d'amplitude complexe $\underline{F}$.\\
+On défini l'impedence complexe d'un oscillateur mécanique par le rapport :
+$$\underline{Z} = \dfrac{\underline{F}}{\underline{V}}$$
+avec $\underline{V}$ la vitesse complexe
+\end{de}
+\section{Force explicite}
+D'apres l'équation différentielle du mouvement de M(m), on obtient l'impedence complexe d'une oscillateur mécanique :
+$$\underline{Z}(\omega) = im\omega + \alpha + \dfrac{k}{i\omega}$$
+\section{Analogie électro-mécanique}
+On observe l'équivalence formel des grandeurs suivantes :\\
+\begin{itemize}
+ \item[$.$] Électricité $\rightarrow$ Mécanique\\
+  \item[$.$] q(t) $\rightarrow$ x(t)\\
+ \item[$.$] i(t) $\rightarrow$ v(t)\\
+ \item[$.$] u(t) $\rightarrow$ f(t)\\
+ \item[$.$] R $\rightarrow$ $\alpha$\\
+ \item[$.$] L $\rightarrow$ m\\
+ \item[$.$] $\dfrac{1}{c}$ $\rightarrow$ k\\
+\end{itemize}
+\end{document}

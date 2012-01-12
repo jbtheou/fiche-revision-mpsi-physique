@@ -1,0 +1,78 @@
+\chapter{Cinématique du point}
+\section{Postulats de Newton}
+\subsection{Espace et Temps}
+La mécanique newtonienne repose sur les postulats spatio-temporels de Newton, à savoir :
+\begin{itemize}
+ \item[$\rightarrow$] L'espace est absolu, immuable, infini, euclidien, homogène et isotrope
+ \item[$\rightarrow$] Le temps est absolu et uniforme
+\end{itemize}
+\subsection{Point matériel - Réferentiel}
+\begin{de}
+Un système sera assimilé à un point à partir du moment où sa position dans l'espace peut etre donnée par un triplet de coordonées.
+\end{de}
+\begin{de}
+On parle d'un point materiel quand on concentre la totalité de la masse du système à l'isobarycentre des masses. La position de cet objet sera donc étudié depuis ce point.
+\end{de}
+\begin{de}
+Un référentiel est un repère muni de la notion de temps. On peut donc y effectuer des mesures, et donc y réaliser une étude cinématique.
+\end{de}
+\section{Vitesse}
+\begin{de}
+Soit M un point materiel observé dans un référentiel R.\\
+La position de M à l'instant t est donnée par le vecteur position $\overrightarrow{OM}$(t).\\
+La vitesse de M dans R est définie par :
+$$\overrightarrow{V}(M)_R = \left( \dfrac{d\overrightarrow{OM}(t)}{dt}\right)_R $$
+De plus, si on considère $\overrightarrow{dl}$ un déplacement élementaire, on obtient :
+$$\overrightarrow{V}(M)_R = \left( \dfrac{\overrightarrow{dl}}{dt}\right)_R $$
+\end{de}
+\subsubsection{Expression en coordonnées catérisienne}
+$$\overrightarrow{V}(M)_R = \mathring{x}\overrightarrow{i} + \mathring{y}\overrightarrow{j} + \mathring{z} \overrightarrow{k}$$
+\subsubsection{Expression en coordonnées cylindrique}
+$$\overrightarrow{V}(M)_R = \mathring{r}\overrightarrow{u_r} + r\mathring{\theta}\overrightarrow{u_{\theta}} + \mathring{z} \overrightarrow{k}$$
+\subsubsection{Expression en coordonnées polaire}
+$$\overrightarrow{V}(M)_R = \mathring{r}\overrightarrow{u_r} + r\mathring{\theta}\overrightarrow{u_{\theta}}$$
+\section{Accélération}
+\begin{de}
+Par définition, l'accélération de M, animé de la vitesse $\overrightarrow{V}(M)_R$ est donnée par :
+$$\overrightarrow{a}(M)_R = \left( \dfrac{d\overrightarrow{V}(M)_R}{dt}\right)_R $$
+\end{de}
+\subsubsection{Expression en coordonnées cartérisienne}
+$$\overrightarrow{a}(M)_R = \mathring{x}\mathring{}\overrightarrow{i} + \mathring{y}\mathring{}\overrightarrow{j} + \mathring{z}\mathring{} \overrightarrow{k}$$
+\subsubsection{Expression en coordonnées cylindrique}
+$$\overrightarrow{a}(M)_R = (\mathring{r}\mathring{} - r\mathring{\theta}^2)\overrightarrow{u_r} + (2\mathring{r}\mathring{\theta} + r\mathring{\mathring{\theta}})\overrightarrow{u_{\theta}} + \mathring{z}\mathring{}\overrightarrow{k}$$
+\subsubsection{Expression en coordonnées polaire}
+$$\overrightarrow{a}(M)_R = a_r\overrightarrow{u_r} + a_{\theta}\overrightarrow{u_{\theta}}$$
+avec : 
+\begin{itemize}
+ \item[$\rightarrow$] $a_r = \mathring{r}\mathring{} - r\mathring{\theta}^2$ : C'est l'accélération radiale
+ \item[$\rightarrow$] $a_{\theta} = 2\mathring{r}\mathring{\theta} + r\mathring{\mathring{\theta}}$ : C'est l'accélération orthoradiale
+\end{itemize}
+En coordonnée polaire, on dit qu'un système subit une accélération centrale si et seulement si l'accélération $a_{\theta}$ est nul. \\
+Dans ce cas, le vecteur accélération passe par un point fixe appelé centre de force.\\
+De plus, en dérivant $r^2\mathring{\theta}$ par rapport au temps, on remarque que l'expression :
+$$\varphi = r^2\mathring{\theta} $$
+est une constante.\\
+On appelle $\varphi$ constante des aires
+\section{Vitesse et accélération dans la base de Frenet}
+\begin{de}
+Soit $\overrightarrow{t}$ un vecteur unitaire tangent à la trajectoire à chaque instant.\\
+Soit $\overrightarrow{\omega} = \mathring{\theta}\overrightarrow{k}$, le vecteur rotation instanée.\\
+Soit $\overrightarrow{n}=\overrightarrow{k}\wedge\overrightarrow{t}$.\\
+On appelle base de Frenet, la base ($\overrightarrow{t},\overrightarrow{n},\overrightarrow{k}$) orthonormée direct
+\end{de}
+\subsection{Déplacement élémentaire}
+On défini un cercle, dit osculateur (tangent à la trajectoire au point M(t), à l'instant t), de rayon $R_c$ et de centre C.\\
+On défini :
+$$dl = R_c.d\theta$$
+\subsection{Vitesse}
+On défini la vitesse dans la base de Frenet par :
+$$\overrightarrow{V}(M)_R = R_c\mathring{\theta}\overrightarrow{t}$$
+\subsection{Accélération}
+On défini l'accélération dans la base de Frenet par :
+$$\overrightarrow{a}(M)_R = a_n\overrightarrow{n} + a_t\overrightarrow{t}$$
+avec :
+\begin{itemize}
+ \item[$\rightarrow$] $a_n = \dfrac{v^2}{R_c}$ : C'est l'accélération normale
+ \item[$\rightarrow$] $a_t = \left(\dfrac{dv}{dt}\right)_R$ : C'est l'accélération tangentielle
+\end{itemize}
+

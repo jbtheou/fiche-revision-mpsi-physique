@@ -1,0 +1,62 @@
+\chapter{Dipole électrique}
+\section{Propriétés électriques du dipole}
+\begin{de}
+On appelle dipole électrique un système électroniquement neutre, dans lequel le barycentre des charges positives est différent de celui des charges négatives
+\end{de}
+\subsection{Propriétés de symétrie}
+Soit une charge -q placé en N, et une charge q passé en P.\\
+Soit a = NP, la distance entre les charges. On pose O = $\dfrac{a}{2}$.\\
+Soit M situé à une distance r de O, avec r $\gg$ a.\\
+Par application du principe de Curie, on obtient que le plan horizontal est un plan de symétrie. On détermine donc le champs $\overrightarrow{E}(M)$ dans ce plan.
+\subsection{Potentiel crée par le dipole}
+Soit $\overrightarrow{p}$ le vecteur moment dipolaire défini par :
+$$\overrightarrow{p} = q.\overrightarrow{NP}$$
+On obtient, à l'aide du principe de superposition, l'expression du potentiel crée par un dipole électrostatique à grande distance : 
+$$V(M) = \dfrac{\overrightarrow{p}.\overrightarrow{r}}{4\pi \varepsilon_0 r^3}$$
+\subsection{Champ électrostatique}
+Sachant que $\overrightarrow{E}(M) = -\overrightarrow{grad}(V(M))$, on obtient l'expression du champ électrique crée à une grande distance : 
+$$\overrightarrow{E}(M) = \dfrac{1}{4\pi \varepsilon_0 r^3}(3.(\overrightarrow{p}.\overrightarrow{u_r})\overrightarrow{u_r}-\overrightarrow{p})$$
+\subsection{Propriétés électriques}
+Nous avons les propriétés suivantes :
+\begin{itemize}
+ \item[$\rightarrow$] Dans le cas d'une charge ponctuelle : 
+\begin{itemize}
+ \item[$\rightarrow$] V(r) $\propto \dfrac{1}{r}$
+\item[$\rightarrow$] E(r) $\propto \dfrac{1}{r^2}$
+\end{itemize}
+ \item[$\rightarrow$] Dans le cas d'un dipole : 
+\begin{itemize}
+ \item[$\rightarrow$] V(r,$\theta$) $\propto \dfrac{1}{r^2}$
+ \item[$\rightarrow$] E(r,$\theta$) $\propto \dfrac{1}{r^3}$
+\end{itemize}
+\end{itemize}
+On observe donc qu'un dipole électrique à des actions de courte portée, et contrairement à une charge ponctuelle, ses actions sont anisotrope, c'est à dire que le potentiel et le champs dépendent de $\theta$.
+\begin{prop}
+On obtient l'équation suivante pour les lignes de champs : 
+$$r(\theta) = r_0.\sqrt{|cos(\theta)|}$$ 
+\end{prop}
+\section{Action d'un champ électrique sur un dipole}
+\subsection{Dans un champs uniforme}
+\begin{prop}
+Dans un champs électrique uniforme, le dipole ne se déplace pas, mais il tourne sous l'action d'un couple : $$\overrightarrow{M}(O) = \overrightarrow{p}\wedge\overrightarrow{E}_0$$
+Ce couple tend à orienter $\overrightarrow{p}$ dans le sens de $\overrightarrow{E}_0$
+\end{prop}
+\begin{prop}
+L'énergie potentielle d'interaction d'un dipole, de moment polaire $\overrightarrow{p}$, dans un champs $\overrightarrow{E}_0$ est donnée par : 
+$$E_{p_{dipole}} = -\overrightarrow{p}.\overrightarrow{E}_0$$ 
+\end{prop}
+\subsection{Dans un champ inhomogène}
+\begin{prop}
+Le dipole tend à s'orienter dans le sens de $\overrightarrow{E}$, mais cette fois-ci, la résultante des forces n'étant pas nulle, le dipole se déplace vers les zones de champs intense.
+\end{prop}
+\subsection{Force de Van der Waales}
+\begin{de}
+À l'échelle atomique et moléculaire, la force dominante est d'origine électromagnétique. À courte portée, de l'ordre du $\mu m$, cette force est modélisé par la force de Van der Waales, qui est une force attractive $\propto \dfrac{1}{r^7}$. Elle résulte de trois interactions dipolaires :
+\begin{enumerate}[1-]
+ \item Keeson : Une interaction entre dipole permanent ($H_2O$ et $H_2O$ par exemple)
+ \item London : Une interaction entre dipole instantanée ( Comme le dipole crée par l'électron et le protons dans le modèle de Bohr par exemple)
+ \item Debye : Une interaction crée entre un dipole permanent et un dipole induit (Un dipole polarisé qui polarise un dipole à la base neutre)
+\end{enumerate}
+Il existe une force répulsive qui compense à très courte distance la force de Van der Waales. Elle est une conséquence du principe quantique d'exculsion de Pauli. Elle est du type $\dfrac{1}{r^{13}}$
+\end{de}
+

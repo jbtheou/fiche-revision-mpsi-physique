@@ -1,0 +1,119 @@
+\chapter{Circulation et flux}
+\section{Définitions}
+\subsection{Circulation d'un champ de vecteurs}
+\begin{de}
+Soit $\overrightarrow{A}(M)$ un champ de vecteur au point M.\\
+On appelle circulation de $\overrightarrow{A}(M)$ entre deux points $M_1$ et $M_2$, le scalaire défini par : 
+$$C = \int_{M_1}^{M_2} dC(M) = \int_{M_1}^{M_2} \overrightarrow{A}(M).\overrightarrow{dl}$$
+Sur un contour fermé, la circulation est notée :
+$$C = \oint\overrightarrow{A}(M).\overrightarrow{dl}$$
+\end{de}
+\begin{de}
+$\overrightarrow{A}(M)$ est en circulation conservative si sa circulation ne dépend pas du chemin suivi, mais uniquement du point de départ et du point d'arrivé.
+\end{de}
+\begin{prop}
+Sur un contour fermé, si la force est conservative :
+$$C = \oint \overrightarrow{A}(M).\overrightarrow{dl} = 0$$
+\end{prop}
+\subsection{Flux d'un champ de vecteur}
+\begin{de}
+Par définition, le flux du champs de vecteur $\overrightarrow{A}(M)$, à travers la surface S orienté est donnée par : 
+$$\phi = \iint_S \overrightarrow{A}(M).d\overrightarrow{S}(M)$$
+Avec $d\overrightarrow{S}(M)$ surface orienté définie au voisinage du point M.
+\end{de}
+\begin{de}
+Si la surface est fermé, le flux devient : 
+$$\phi = \oiint_S \overrightarrow{A}(M).d\overrightarrow{S}(M)$$
+La surface fermé délimite un volume. On peut donc distinguer un milieu interieur d'un milieu exterieur. Il est d'usage d'orienter dans ce cas $d\overrightarrow{S}(M)$ vers l'exterieur.
+\end{de}
+\section{Circulation du champs électrostatique : Potentiel électrostatique}
+\subsection{D'une particule ponctuelle}
+Soit O(q) une charge ponctuelle de charge q placée à l'origine d'un repère R.\\
+La circulation du champs $\overrightarrow{E}(M)$ entre deux points quelconque $M_1(r_1)$ et $M_2(r_2)$ est : 
+$$C = \int_{M_1}^{M_2} \overrightarrow{E}(M).\overrightarrow{dl}$$
+En explicitant $\overrightarrow{dl}$ en coordonnée cylindrique, on obtient :
+$$C = \dfrac{q}{4\pi \varepsilon_0 r^2}(\dfrac{1}{r_1} - \dfrac{1}{r_2})$$
+$\overrightarrow{E}(M)$ est donc à circulation conservative
+\subsection{Potentiel électrostatique}
+\begin{de}
+Par analogie avec la définition des fonctions énergies potentielles $E_p$, on appelle potentiel électrostatique en M, notée V(M), la fonction définie par : 
+$$C = -\Delta V = -(V(M_2)-V(M_1))$$
+On obtient dans le cas d'un champs électrostatique crée par une charge ponctuelle en M :
+$$V(M) = \dfrac{q}{4\pi \varepsilon_0.r}$$
+Ceci est obtenu en posant qu'à l'infini, V(M) = 0
+\end{de}
+\subsection{Relation entre le champs et le potentiel}
+Sachant que C est égale à -$\Delta V$, et d'après la définition de la circulation, on obtient :
+$$dV(M) = -\overrightarrow{E}(M).\overrightarrow{dl}$$
+Et comme, par définition : 
+$$dV(M) = \overrightarrow{grad}(V).\overrightarrow{dl}$$
+On obtient la relation suivante : 
+$$\overrightarrow{E}(M) = -\overrightarrow{grad}(V)$$
+Par analogie avec la statique des fluides, on obtient : 
+\begin{prop}
+Les surfaces équipotentielle sont $\bot$ à $\overrightarrow{E}(M)$
+\end{prop}
+\begin{prop}
+$\overrightarrow{E}(M)$ descent les potentielles. Il est orienté des hauts potentiels vers les bas potentiels. 
+\end{prop}
+\begin{prop}
+On obtient la formulation intégrale associés : 
+$$V_2 - V_1 = -\int_{M_1}^{M_2} \overrightarrow{E}(M).\overrightarrow{dl}$$
+\end{prop}
+Par application du principe de superposition, toutes les relations établies précédements sont vérifié quelque soit la distribution de charge.
+\subsection{Théorème de l'énergie cinétique}
+\begin{prop}
+Par application du théorème de l'énergie cinétique, on obtient : 
+$$\Delta E_c(M) = -q.\Delta V$$
+On en déduit l'expression de l'énergie potentielle d'une charge ponctuelle dans un potentiel V(M) : 
+$$E_p(M) = q.V(M)$$
+\end{prop}
+\section{Flux du champ électrostatique : Théorème de Gauss}
+\begin{theo}
+Le flux du champ électrostatique $\overrightarrow{E}(M)$ à travers une surface de Gauss $S_g$ fermé est égale à la charge interieure à cette surface, notée $Q_{int}$, sur la permitivité du vide $\varepsilon_0$.
+$$\phi = \oiint_{M \in S_g} \overrightarrow{E}(M).d\overrightarrow{S}(M) = \dfrac{Q_{int}}{\varepsilon_0}$$
+\end{theo}
+\subsection{Relation de continuité}
+\begin{itemize}
+ \item[$\rightarrow$] $\overrightarrow{E}$(M) est continue à la traversé d'une distribution volumique de charge, mais discontinue à la traversé d'une distribution surfacique.
+ \item[$\rightarrow$] V(M) est continue à la traversé d'une distribution volumique ou surfacique de charge, mais discontinue à la traversé d'une distribution linéique.
+\end{itemize}
+Ces relations de continuité nous permettent de determiner V par intégration, et de vérifier la pertinance de nos calculs pour le champs.
+\subsection{Conditions d'application du théorème de Gauss}
+Considérons une charge ponctuelle de charge q situé en O. Soit $S_{g_1}$ une surface de Gauss centré sur $O_1$ avec $O_1$ différent de 0.\\
+Par application du théorème de Gauss, on obtient : 
+$$\phi = \oiint \overrightarrow{E}(M).\overrightarrow{dS} = \dfrac{Q_{int}}{\varepsilon_0} = 0$$
+La nulité du flux n'implique pas la nulité du champs.
+Une bonne utilisation du théorème de Gauss passe par l'étude de la topographie du champs.
+\subsubsection{Principe de Curie}
+\begin{theo}
+"La symétrie de la cause se retrouve dans les effets" 
+\end{theo}
+Appliqué à l'électrostatique, ce principe implique que tous élements de symétrie pour la charge est un élement de symétrie pour le champs. Donc, si la distribution de charge admet un plan de symétrie de translation ou de rotation, alors $\overrightarrow{E}$ est porté par ce plan.
+\section{Application à la gravitation}
+Tous les résultats établies en électrostatique sont généralisable à la gravitation.\\
+On passe donc de l'électrostatique à la gravitation en effectuant les changements suivants : 
+\begin{itemize}
+ \item[$\rightarrow$] q $\rightarrow$ m
+ \item[$\rightarrow$] $\overrightarrow{E}(M) \rightarrow \overrightarrow{g}(M)$
+ \item[$\rightarrow$] $\dfrac{1}{\varepsilon_0} \rightarrow -4\pi.G$
+\end{itemize}
+\subsection{Généralisation}
+\begin{de}
+Par analogie, le potentiel gravitationnelle est donnée par : 
+$$\overrightarrow{g}(M) = -\overrightarrow{grad}(V(M))$$
+Avec V(M) le potentiel gravitationnelle.\\
+On obtient donc le potentiel gravitationnelle crée par une masse ponctuelle M à une distance r :
+$$V(M) = \dfrac{-G.m}{r}$$
+\end{de}
+\begin{de}
+Si on place une masse m' en M, l'énergie potentielle d'interaction entre m et m' est donnée par :
+$$E_p = m'.V(M) = \dfrac{-G.m.m'}{r}$$
+\end{de}
+\begin{prop}
+Le théorème de Gauss appliqué à la gravitation devient : 
+$$\phi = \oiint\overrightarrow{g}(M).\overrightarrow{dS} = -4\pi.G.M_{int}$$
+avec $M_{int}$ la masse interieur à la surface de Gauss.
+\end{prop}
+
+

@@ -1,0 +1,21 @@
+\chapter{Théorèmes généraux}
+Tous ces théorèmes ne sont applicable que dans le cas d'un dipole linéaire, c'est à dire un dipole donc la caractéristique est linéaire.
+\section{Diviseur de tension}
+Considérons l'association de n conducteurs ohmiques en série entre deux points A et B.\\
+Soit $U_j$ la tension parcourant le $j^{eme}$ conduteur ohmique, de résistance $R_j$ :
+$$U_j = \left( \dfrac{R_j}{\sum_{k=1}^n R_k}\right)U_{AB} $$
+\section{Diviseur de courant}
+Considérons deux résitances en dérivation.\\
+Soit i le courant entrant, $i_1$ le courant traversant la résistance $R_1$.\\
+On obtient :
+$$i_1 = \left( \dfrac{R_2}{R_1+R_2}\right)i$$
+\section{Théorème de Kennely}
+Considérons un montage en étoile contenant les résistances $R_1,R_2,R_3$.\\
+On obtient le montage équivalent, avec un seul noeud, contenant les résistances $r_1,r_2,r_3$, à l'aide des relations :
+$$r_1 = \dfrac{R_2.R_3}{\sum_i R_i}$$
+avec $r_1$ du coté de A, on a donc au numérateur $R_2,R_3$, qui sont eux aussi du coté de A.
+\section{Théorème de Millman}
+Considérons un circuit composé de plusieurs dipôles : sources de courants, sources de tensions, résistances.
+Soit A et B deux points du circuits.\\
+Le théorème de Millman permet de déterminer la tension $U_{AB}$ de la façon suivante :
+$$U_{AB} = \dfrac{\sum_{j=1}^m \dfrac{U_{jB}}{R_j} + \sum_{k=1}^M \pm i_k}{\sum_{j=1}^n \dfrac{1}{R_j}}$$

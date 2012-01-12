@@ -1,0 +1,59 @@
+\title{Magnétostatique}
+\author{MPSI}
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter{Magnétostatique}
+\section{Loi de Biot et Savart}
+Une particule chargée au repos crée un champ électrique $\overrightarrow{E}$. Si une charge est mise en mouvement, on peut lui associer un courant électrique.\\
+Ce courant I crée un champ magnétique $\overrightarrow{B}$.\\
+La relation entre I et $\overrightarrow{B}$ est donnée par la relation de Biot et Savart
+\begin{theo}
+Considérons un circuit filliforme, parcouru par un courant I constant. Soit P un point quelconque du circuit, au voisinage duquel on défini une longeur élementaire $\overrightarrow{dl}$ orienté dans le sens de I.\\
+On obtient la formule de Biot et Savart : 
+$$d\overrightarrow{B}(M) = \dfrac{\mu_0.I.\overrightarrow{dl}\wedge\overrightarrow{PM}}{4\pi.PM^2}$$
+Cette loi est vérifié en régime indépendant du temps, dans le vide.
+\end{theo}
+\begin{prop}
+De cette formule, de par la présence du produit vectorielle, on en déduit l'existance d'une antisymétrie entre la cause I et l'effet $\overrightarrow{B}$
+\end{prop}
+\begin{prop}
+Le champ résultant en M est donnée par : 
+$$\overrightarrow{B}(M) = \int_{fil} d\overrightarrow{B}(M)$$ 
+\end{prop}
+\chapter{Flux du champ magnétique}
+\section{Flux conservatif}
+\begin{prop}
+À l'aide de la loi de Biot et Savard, on montre de $\overrightarrow{B}(M)$ est à flux conservatif. Ceci signifie que l'intégrale de $\overrightarrow{B}(M)$ sur une surface fermé est toujours nulle : 
+$$\oint\oint_{M \in S} \overrightarrow{B}(M).\overrightarrow{dS} = 0$$
+\end{prop}
+\section{Variation du champ magnétique dans un tube de champ}
+Les lignes de champs de $\overrightarrow{B}$(M) sont partout tangents à $\overrightarrow{B}$(M).\\
+On obtient donc que quand $\overrightarrow{B}(M)$ est uniforme, ses lignes de champs sont parralèle.
+\begin{de}
+En retirant un "certain" nombre de lignes de champs, on défini un tube de champs.
+\end{de}
+\begin{prop}
+En explicitant la conservation du flux de $\overrightarrow{B}$(M) sur le tube de champs, on obtient que : 
+$$B_1dS_1 = B_2dS_2$$
+La conservation du flux de $\overrightarrow{B}(M)$ implique donc que $\overrightarrow{B}(M)$ est plus intense dans les zones d'étrangelement du tube de champs.
+\end{prop}
+\begin{prop}
+Par application du théorème de Gauss dans un tube de champs : 
+$$\iint_{M \in S} \overrightarrow{E}(M)\overrightarrow{dS} = \dfrac{Q_{int~ de~ S}}{\varepsilon_0}$$
+\end{prop}
+\chapter{Circulation du champ magnétique sur un contour fermé - Théorème d'Ampère}
+\begin{de}
+On défini le courant enlacé, notée $I_{enlace}$, comme la somme algébrique des courants traversant la surface S. Ces courants sont compté positivement si ils traversent S par sa face Sud, et négativement si ils traversent par sa face Nord.
+\end{de}
+
+\begin{enon}
+La circulation du champ magnétique sur un contour fermé $\varphi$ orienté est égale au produit de la perméabilité du vide par le courant enlacé par le contour :
+$$C = \oint_{M \in \varphi}\overrightarrow{B}(M).\overrightarrow{dl} = \mu_0.I_{enlace}$$
+\end{enon}
+\section{Symétrie}
+\begin{prop}
+Une bonne utilisation du théorème d'Ampère repose sur l'observation attentive de la topologie de $\overrightarrow{B}$, exactement comme pour le théorème de Gauss.\\
+Par application du principe de Curie, on en déduit que tous plans de symétrie de translation ou de rotation pour I est perpendiculaire à $\overrightarrow{B}(M)$ et que les variables naturelles du courant sont les variables naturelles du champ magnétique 
+\end{prop}
+
